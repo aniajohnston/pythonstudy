@@ -1,5 +1,5 @@
 # Print built in function
-# print('Hello World!') #string can have single or double quotes
+# print('Hello World!') #string can have single or double quotes #hardcoded
 
 #using variable
 # greeting = 'hello world'
@@ -35,8 +35,11 @@
 # except ZeroDivisionError as e:
 #     print('You cannot divide by zero, have a great day!')
 
-# Exponents
 
+# Exponents
+# print(5 ** 5)
+# print(2 ** 5)
+# print(3 ** 6)
 
 # Integer Division
 
