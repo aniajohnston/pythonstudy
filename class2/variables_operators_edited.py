@@ -92,10 +92,22 @@
 
 
 # List 
+# student_grades = [100, 95, 70, 85, 40] #always in brackets
+# print(student_grades)
+# print(type(student_grades))
+
+#Quick for loop
+# for s in student_grades: #the letter iterates through the list. could be anything but s here stands for student grades.
+#     print(s)
+
 
 
 # Dictionary
-
+# demographic_info = {"First Name": "Ania",
+#                     "Last Name": "Johnston",
+#                     "State": "New York"}
+# print(demographic_info)
+# print(type(demographic_info))
 
 # Cast a string to an integer
 
