@@ -35,37 +35,60 @@
 # except ZeroDivisionError as e:
 #     print('You cannot divide by zero, have a great day!')
 
-
 # Exponents
 # print(5 ** 5)
 # print(2 ** 5)
 # print(3 ** 6)
 
 # Integer Division
-
+# print(10 // 3) #whole number with no remainder
+# print(4 // 3) #should be '1' because 3 goes into 4 only once.
 
 # Modulo/Mod/Remainder
-
+# print(5 % 2) #the remainder is 1 #helps you solve if a number is even or odd.
+# print(10 % 4) #the answer should be 2
+# Program to find the perimeter of a rectangle
 
 # Program to find the perimeter of a rectangle
+# Perimeter = 2* (length + width)
+
+# length = 10
+# width = 7
+
+# perimeter = 2 * (length + width)
+
+# print(perimeter)
 
 
 # Data Types
 
 
 # Integer
-
+# num_one = 5
+# print(num_one)
+# print(type(num_one))
 
 # String
-
+# string_one = 'this is a string'
+# print(string_one)
+# print(type(string_one))
 
 # Bool
-
+# technical_errors = True
+# print(technical_errors)
+# print(type(technical_errors))
 
 # Float
+# num_two = 1.22
+# print(num_two)
+# print(type(num_two))
 
-
-# String
+# String addition
+# first_name = 'Ania'
+# last_name = 'Johnston'
+# fullname = first_name + ' ' + last_name
+# print(fullname)
+# print(first_name, last_name)
 
 
 # List 
