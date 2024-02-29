@@ -171,20 +171,20 @@ perimeter = a + b + c
 3. Using boolean operators is side #2 less than the base?
 4. Using boolean operators is base larger than or equal to side #1?
 '''
-side_1 = 4
-side_2 = 3
-base = 6
-perimeter = side_1 + side_2 + base
-print(perimeter) #1.
+# side_1 = 4
+# side_2 = 3
+# base = 6
+# perimeter = side_1 + side_2 + base
+# print(perimeter) #1.
 
-greater = side_1 > base
-print('Using boolean operators is side #1 greater than the base?',greater) #2.
+# greater = side_1 > base
+# print('Using boolean operators is side #1 greater than the base?',greater) #2.
 
-less = side_2 < base
-print('Using boolean operators is side #2 less than the base?',less) #3.
+# less = side_2 < base
+# print('Using boolean operators is side #2 less than the base?',less) #3.
 
-greater_eq = base >= side_1
-print('Using boolean operators is base larger than or equal to side #1?',greater_eq) #4.
+# greater_eq = base >= side_1
+# print('Using boolean operators is base larger than or equal to side #1?',greater_eq) #4.
 
 
 
