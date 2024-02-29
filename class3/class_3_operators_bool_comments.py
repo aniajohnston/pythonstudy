@@ -168,21 +168,33 @@ fahrenheight *=5/9
 # print(6 > 2)
 
 # Is 5 greater than or equal to 6? >=
+# result = (5 >= 6)
 # print(5 >= 6)
 
 # Is 5 equal to 5? ==
-
+# print(5 == 5)
+# result = (5 == 5)
+# print(result)
 
 # Is 100 not equal to 75? !=
-
+# print(100 != 75)
+# print(100 != 100)
+# result = (100 != 75)
+# print(result)
 
 # and
+# print(5 == 5 and 4 == 4) #this is true because both are true
+# print(2==2 and 3 == 2) #this is false because one is false
+# print(1==0 and 3==5) #this is false because both are false
 
 
 # Values from example 1 can be stored in variables
-
+# logic_1 = (5 == 5)
+# logic_2 = (4 == 4)
+# print('Your answer is:',logic_1 and logic_2)
 
 # or
+
 
 
 # not
