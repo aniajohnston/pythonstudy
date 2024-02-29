@@ -11,7 +11,7 @@ weekday = 'Wednesday'
 
 
 first_name = 'Thomas' ''' Multi-line comments can be inline '''
-last_name = 'The Train' """ This makes an inline comment as well """
+last_name = 'The Train' """ Holding shift and clicking double quotes three times makes an inline comment as well """
 
 '''
 I am a multi-line comment and 
@@ -42,14 +42,15 @@ An inline comment is a comment on the same line as a statement. Inline comments 
 
 # Comment me!
 
-length = 5  
-width = 7 
-perimeter = 2 * (length + width)
-# print(perimeter)
+#we are solving for the perimeter of a rectangle
+length = 5  #this is the length of our rectangle
+width = 7  #this is the width of our rectangle
+perimeter = 2 * (length + width) #here we stated the formula of our rectangle's perimeter
+# print(perimeter) #here we printed the answer
 
 
 # Comment me!
-
+# tuesday's temperature
 fahrenheight = 89 
 celsius = (fahrenheight - 32) * 5/9
 # print(celsius)
@@ -58,20 +59,26 @@ celsius = (fahrenheight - 32) * 5/9
 '''Shortcut operators'''
 
 # Add 5 to me using shortcut operator +
-age = 25
-
+# age = 25
+# age += 5
+# print(age)
 
 # Add 10 to me using shortcut operator +
-year = 2024
+# year = 2024
+# year +=10
+# print(year)
 
 
 # Subtract 20 -
-num_one = 55
+# num_one = 55
+# num_one -= 20
+# print(num_one)
 
 
 # Subtract 15 -
-num_two = 11
-
+# num_two = 11
+# num_two -= 15
+# print(num_two)
 
 # Multiply by 3 *
 my_value = 9
