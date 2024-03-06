@@ -144,12 +144,12 @@ celsius = (fahrenheight - 32) * 5/9
 
 # Refactor the fahrenheit/celsius converter using shortcut operators
 
-fahrenheight = 89 
-# celsius = (fahrenheight - 32) * 5/9
+farenheit = 89 
+# celsius = (farenheit - 32) * 5/9
 # print(celsius)
 
-fahrenheight -=32 
-fahrenheight *=5/9
+farenheit -=32 
+farenheit *=5/9
 # print(fahrenheight)
 
 ''' Boolean Operators'''
