@@ -13,6 +13,17 @@ weekday = 'Wednesday'
 first_name = 'Thomas' ''' Multi-line comments can be inline '''
 last_name = 'The Train' """ Holding shift and clicking double quotes three times makes an inline comment as well """
 
+
+
+'''
+Will be a multi line comment
+
+'''
+
+'''This will be inline'''
+
+"""This behaves the same"""
+
 '''
 I am a multi-line comment and 
 can easily be used to span 
@@ -43,17 +54,20 @@ An inline comment is a comment on the same line as a statement. Inline comments 
 # Comment me!
 
 #we are solving for the perimeter of a rectangle
+
 length = 5  #this is the length of our rectangle
 width = 7  #this is the width of our rectangle
-perimeter = 2 * (length + width) #here we stated the formula of our rectangle's perimeter
+# Perimeter of my rectangle
+perimeter = 2 * (length + width)
 # print(perimeter) #here we printed the answer
 
 
 # Comment me!
-# tuesday's temperature
+# Tuesday's temperature
 fahrenheight = 89 
+# Convert farenheight to celcius
 celsius = (fahrenheight - 32) * 5/9
-# print(celsius)
+# print(celsius) #here we test
 
 
 '''Shortcut operators'''
@@ -63,9 +77,10 @@ celsius = (fahrenheight - 32) * 5/9
 # age += 5
 # print(age)
 
+
 # Add 10 to me using shortcut operator +
 # year = 2024
-# year +=10
+# year += 10
 # print(year)
 
 
@@ -79,6 +94,7 @@ celsius = (fahrenheight - 32) * 5/9
 # num_two = 11
 # num_two -= 15
 # print(num_two)
+
 
 # Multiply by 3 *
 # my_value = 9
@@ -96,7 +112,8 @@ celsius = (fahrenheight - 32) * 5/9
 # Divide by 2 /
 # pizza_slices = 8
 # pizza_slices /= 2
-# print(pizza_slices)
+# print(pizza_slices) 
+'''Does division always return a float?'''
 
 # Divide by 7 /
 # fees = 8.90
@@ -116,12 +133,16 @@ celsius = (fahrenheight - 32) * 5/9
 # data **= 2
 # print(data)
 
+'''With Integer Division:
+Think: how many times does the divide by
+fit into the variable value'''
+
 
 # # Integer divide by 3 //
 # val_one = 16
-# val_one //= 3
+# val_one //=3
 # print(val_one)
-
+'''Does not return a remainder with the answer'''
 
 
 # Integer divide by 4 //
@@ -129,10 +150,13 @@ celsius = (fahrenheight - 32) * 5/9
 # val_two //= 4
 # print(val_two)
 
+'''Mod returns the remainder'''
+
 # # Find the remainder if divided by 3 %
 # val_three = 10
 # val_three %= 3
 # print(val_three)
+
 
 
 
@@ -144,22 +168,30 @@ celsius = (fahrenheight - 32) * 5/9
 
 # Refactor the fahrenheit/celsius converter using shortcut operators
 
+'''without shortcut operators'''
 farenheit = 89 
 # celsius = (farenheit - 32) * 5/9
 # print(celsius)
-
-farenheit -=32 
-farenheit *=5/9
-# print(fahrenheight)
+'''with shortcut operators'''
+# farenheit = 89
+# farenheit -= 32
+# farenheit *= 5/9
+'''think about this as casting a 
+variable to another variable'''
+# celcius = farenheit 
+# print(calcius)
 
 ''' Boolean Operators'''
 
 # Is 7 less than 5? <
 # print(7 < 5)
+'''why do we asign to result?
+for readability'''
 # result = (7 < 5)
 # print(result)
 
 # Is 4 less than or equal to 4? <=
+# print(4 <= 4)
 # result = (4 <= 4) 
 # print(result)
 
@@ -183,30 +215,50 @@ farenheit *=5/9
 # print(result)
 
 # and
-# print(5 == 5 and 4 == 4) #this is true because both are true
+'''and applies boolean to however 
+many results are run together'''
+# print(5 == 5 and 4 == 4 and 2 == 2) #this is true because both are true
 # print(2==2 and 3 == 2) #this is false because one is false
 # print(1==0 and 3==5) #this is false because both are false
 
-
+'''You can use and to link variables together
+and check for Boolean'''
 # Values from example 1 can be stored in variables
 # logic_1 = (5 == 5)
 # logic_2 = (4 == 4)
-# print('Your answer is:',logic_1 and logic_2)
+# print(logic_1 and logic_2)
 
+
+'''Or will give you true if one or the other is true
+if at least 1 are true'''
 # or
+# print( 100==100 or 45>70)
 
 
-
+'''Not gives us the opposite'''
 # not
+x = 5
+y = 7
 
-# Is x less than y?
+# is x < y?
+# print(x < y)
+# print(not x < y)
 
-
+'''REVIEW'''
 # Are we the same object? is 
+# fname = 'Taylor'
+# new_name = fname
+# print(fname is new_name)
 
+
+'''in '''
 # in
-
+# print('J' in 'January')
+# print('F' in 'March')
 
 # eval
 
+is_open = 'True'
+weekday = 'False'
+print(eval(is_open))
 
