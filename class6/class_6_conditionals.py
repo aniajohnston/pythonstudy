@@ -35,7 +35,7 @@ This is odd
 
 
 '''Exercise Solution'''
-user_input = int(input('Please enter your number: '))
+# user_input = int(input('Please enter your number: '))
 
 '''OPTION 1'''
 # mod_user_input = user_input % 2
@@ -61,8 +61,64 @@ C - Between 70 and 79
 D - Between 65 and 69
 F - Anything under 65
 '''
+# get grade from user
+# score = int(input('Please enter your grade: '))
+
+#create our conditional
+# if score >= 90 and score <=100:
+#     print(f'Your score of {score} is an A!')
+# elif score >= 80 and score < 90:
+#     print(f'Your score of {score} is a B.')
+# elif score >= 70 and score < 80:
+#     print(f'Your score of {score} is a C.')
+# elif score >= 65 and score < 70:
+#     print(f'Your score of {score} is a D.')
+# else:
+#     print(f'Your score of {score} is an F.')
 
 
+
+'''Shortening the code - conditions go on either end of our variable'''
+# if 90 <= score <=100:
+#     print(f'Your score of {score} is an A!')
+# elif 80 <= score < 90:
+#     print(f'Your score of {score} is a B.')
+# elif 70 <= score < 80:
+#     print(f'Your score of {score} is a C.')
+# elif 65 <= score < 70:
+#     print(f'Your score of {score} is a D.')
+# else:
+#     print(f'Your score of {score} is an F.')
+
+
+
+'''Option 3
+Why does this work? Because elif is mutually exclusive.
+In this code, if always gets run first. If returned False, it moves onto the next elif.'''
+# if score >= 90:
+#     print(f'Your score of {score} is an A!')
+# elif score >= 80:
+#     print(f'Your score of {score} is a B.')
+# elif score >= 70:
+#     print(f'Your score of {score} is a C.')
+# elif score >= 65:
+#     print(f'Your score of {score} is a D.')
+# else:
+#     print(f'Your score of {score} is an F.') 
+
+'''If we were to just use 'if' 
+Try to input 95 into this code. What happens?'''
+# if score >= 90:
+#     print(f'Your score of {score} is an A!')
+# if score >= 80:
+#     print(f'Your score of {score} is a B.')
+# if score >= 70:
+#     print(f'Your score of {score} is a C.')
+# if score >= 65:
+#     print(f'Your score of {score} is a D.')
+# else:
+#     print(f'Your score of {score} is an F.') 
+'''When 95 is entered into this code, each if statement runs the code, and returns True because 95 >= 65 and >= 70 and >= 80 and >=90'''
 
 
 
