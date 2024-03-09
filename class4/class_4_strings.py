@@ -270,11 +270,12 @@ ex_16 = ['summer', 'spring', 'fall', 'winter'] # create a string from this list 
 
 # partition() Returns a tuple where the string is partitioned into three parts
 test_17 = 'I am excited about spring time.'
+# print(test_17.partition('about'))
+# print(test_17.partition('spring'))
 
 ex_17 = 'We will be going to the park next week.' # partition this string on the word 'going'
 
 # replace() Returns a string where a specified value is replaced with a specified value
-food = 'My favorite food is pizza.'
 
 
 ex_18 = 'Today is Tuesday. Tuesday we play golf.' # replace instances of Tuesday with Thursday
@@ -293,9 +294,10 @@ lyrics = "Every time that I look in the mirror\nAll these lines on my face getti
 # startswith() Returns true if the string starts with the specified value
 
 name = 'giraffe'
+# print(name.startswith('b'))
 
 ex_20 = 'summer' # Check if this string starts with an 's'
-
+# print(ex_20.startswith('s'))
 
 
 
@@ -310,8 +312,19 @@ ex_21 = '  sportsfan876  ' # sanitize this string
 # print(clean_ex)
 
 '''What is user input'''
-user_input = input('What is your name? ')
+# user_input = input('What is your name? ')
 # print(user_input)
+
+'''number values with user input'''
+# user_input = input('What is your favorite number? ')
+# # print(user_input)
+# # print(type(user_input)) #all user inputs are strings. we need to cast to integer
+# '''you always have to create a new variable to cast to an integer'''
+# num_input = int(user_input)
+# print(num_input)
+# print(type(num_input))
+
+
 
 '''
 Write some code that will take a string from the user and print if it is a number or not.
@@ -325,10 +338,18 @@ True
 '''
 
 # Get input from user
+# user_input = input('Please enter your number: ')
+# # print(user_input)
 
-# Test input
+# # Test input
+# result = user_input.isdigit()
+# print(result)
 
-# Provide output
+# # Provide output
+
+# print('Is your input a number or not? ',result)
+'''FORMATTED STRING'''
+# print(f'Is {user_input} a number or not?', result)
 
 
 
@@ -346,13 +367,24 @@ True
 '''
 
 # Get user input
+# user_word = input('Please insert your word: ')
+# user_number = int(input('Please insert your number: ')) #always try to cast to integer at the start
+
+# print(user_word)
+# print(user_number)
 
 # Convert where needed
+# length_of_word = len(user_word)
+
+# print(length_of_word)
+# print(length_of_number)
 
 # Comparison
+# compare = length_of_word > user_number
+# print(compare)
 
 # Output
-
+# print(f'Is {user_word} longer than {user_number}?',compare)
 
 '''
 Exercise 
