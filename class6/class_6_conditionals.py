@@ -140,12 +140,18 @@ This is even
 ''' Exercise solution with an elif and else'''
 # user_input = int(input('Please enter your number: '))
 
+#with an elif
 # if user_input % 2 != 0:
 #     print(f'Your number {user_input} is odd.')
 # elif user_input % 2 == 0:
 #     print(f'Your number is even.')
 
-
+#with an else 
+'''this works because there is only one other option.'''
+# if user_input % 2 != 0:
+#     print(f'Your number {user_input} is odd.')
+# else user_input % 2 == 0:
+#     print(f'Your number is even.')
 
 
 '''
@@ -163,16 +169,29 @@ This is even
 User input: 9.2
 Unknown
 
-
 '''
 
 ''' Exercise solution(s)'''
+# user_input = input('Please enter your number: ')
+
+# if not user_input.isdecimal():
+#     print('Unknown.')
+# elif int(user_input) % 2 != 0:
+#     print(f'Your number {user_input} is odd.')   
+# else:
+#     print(f'Your number {user_input} is even.')
 
 
-
-
-
-
+'''Professor's way of solving'''
+# try: #tries a line of code
+#     user_input = int(input('Please enter your number: ')) #this will get an error if 9.2 is typed.
+# except:
+#     print('Unknown') #this is the code that you think will break the code and generate the error. This is an error message.
+# else:
+#     if user_input % 2 != 0: #this is nested
+#         print('This is odd')
+#     else: #this is nested
+#         print('This is even')
 
 
 '''
