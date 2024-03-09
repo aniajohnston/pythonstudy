@@ -2,84 +2,144 @@
 
 # String operators
 
-'''Concatenation'''
-
+'''Concatenation - for readability'''
+operator_code = 'A987'
+part_id = '49Be'
+# print(operator_code + part_id) #we want to get into the habit of putting this into a variable
+item_number = operator_code + part_id
+# print(item_number)
 
 ''' Create two variables, one to capture first name, another for last name. Combine them to a third variable to display the user's full name. '''
-
+first_name ='Ania'
+last_name = 'Johnston'
+full_name = first_name + ' ' + last_name
+# print(full_name)
 
 ''' Multiplication '''
+greeting ='hip hip horray ' * 3
+# print(greeting)
 
 ''' Using multiplication, create a new string that multiplies your favorite color 5 times'''
+color = 'blue ' * 5
+# print(color)
 
 
-# Reference vs Value equality
+
+# Reference vs Value equality (== vs. is)
 x = 'hello'
-str2 = 'HELLO'.lower()
+str2 = 'HELLO'.lower() #dot lower string method is being applied to this string
+
+# print(x)
+# print(str2)
+
+# print(x == str2) #true
+# print(x is str2) #false, two different variables
+
+# #we can use id() to check whether these objects are the same or not
+# print(id(x))
+# print(id(str2)) #these two objects are not the same
 
 
 
 ''' in - Returns True if a string appears inside another string (as a substring), and False otherwise.'''
 test_character = 'b'
 test_string = 'bananas'
-
+# is test_character in test_string
+# print(test_character in test_string)
 
 ''' create a quick test to see if the sub string 'spreh' can be found in the string 'Incomprehensibilities' '''
 test_chars = 'spreh'
 test_word = 'Incomprehensibilities'
+# print(test_chars in test_word)
 
 
 
-''' len() - Returns the length of a string, aka the number of characters in a string.'''
+
+''' len() - function - Returns the length of a string, aka the number of characters in a string.'''
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
-
+length_of_alphabet = len(alphabet) 
+#what parameters are needed for len? 
+# alphabet is the argument
+# len has a parameter and it's accepting that object 
+# print(length_of_alphabet)
 
 ''' create a variable that holds a string of your favorite animal, create a variable to capture the length of that animal's string value'''
 animal = 'zebra'
+length_of_animal = len(animal)
+# print(length_of_animal)
+
 
 
 # String methods
 
-word_1 = 'happy' # capitalize me!
-
+word_1 = 'happy' # capitalize me! capitalizes first letter
+# print(word_1.capitalize()) #parameter is being applied, DONT FORGET ()
+# print('happy'.capitalize()) #here we are applying it directly to the string
 
 ex_1 = 'cereal' # capitalize me!
+# print(ex_1.capitalize())
 
+word_2 = 'SuPrISe' # make me lower case! #casefold()
+# print(word_2.casefold())
 
-word_2 = 'SuPrISe' # make me lower case!
-
-
-ex_2 = 'RuMMaGe' # make me lower case!
-
+ex_2 = 'RuMMaGe' # make me lower case! #lower()
+# print(ex_2.lower())
+# print(ex_2.casefold())
 
 word_3 = 'ZOO' # make me lower case!
-
+# print(word_3.casefold())
+# print(word_3.lower())
 
 ex_3 = 'PLANET' # make me lower case!
+# print(ex_3.casefold())
+# print(ex_3.lower())
+
 
 '''FUN FACT: Whereas casefold() method is an advanced version of lower() method, it converts the uppercase letter to lowercase including some special characters which are not specified in the ASCII table for example ‘ß’ which is a German letter and its lowercase letter is 'ss'.
 '''
 
 word_4 = 'Good Evening'
-
+# print(word_4)
+#the center() method needs a parameter, let's test it out!
+# print(word_4.center(100)) #takes up 100 characters and centers the string
+# print(word_4.center(50)) #takes up 50 characters and centers the string
 
 ex_4 = 'Hello World!' # center me within a space of 65 characters
+# print(ex_4.center(65)) #takes up 65 characters and centers the string
+# print(ex_4.center(3)) #takes up 3 characters and 'centers' the string
 
 
-word_5 = 'Pseudopseudohypoparathyroidism' # How many p's?
 
+
+word_5 = 'Pseudopseudohypoparathyroidism' # How many p's? use the count method that takes a parameter
+'''There are actually 4 p's but the count() method is case sensitive, use lower()/casefold() to make the input lowercase before using the count() method'''
+# print(word_5.count('p'))
 
 ex_5 = 'Antidisestablishmentarianism' # how many times does the letter 'e' occur?
+# print(ex_5.count('e'))
 
 
-word_6 ='I\tam\ta\ttab'
+'''ESCAPE CHARACTERS'''
+
+"""Expand Tabs - needs an argument + has a parameter"""
+word_6 ='I\tam\ta\ttab'# expand tabs
+# print(word_6)
+# print(word_6.expandtabs(10)) #expands all tabs by declared white spaces
+
+create_new_line = 'I\n am\n a\n new\n line\n'
+# print(create_new_line)
 
 ex_6 = "Let's\t do\t some\t coding!" # lets try to increase the tabs to 10 whitespaces
+# print(ex_6)
+# print(ex_6.expandtabs(10))
+
 
 # Find the position of the letter k
 word_7 = 'Omphaloskepsis'
+# print(word_7.find('k')) #begins at zero position
 
 ex_7 = 'Dichlorodifluoromethane' # find the position of the letter f
+# print(ex_7.index('f'))
 
 word_8 = 'Supercalifragilisticexpialidocious'
 
