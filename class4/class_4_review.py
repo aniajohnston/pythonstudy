@@ -1,3 +1,16 @@
+
+'''
+Write some code that will take a string from the user and print if it is a number or not.
+
+Examples:
+apple
+False
+
+4
+True
+'''
+
+
 '''
 Take a word from the user. Then take a number from the user. Then print whether the word is longer than the number.
 
@@ -10,8 +23,6 @@ python
 4
 True
 '''
-
-
 
 '''
 Exercise 
@@ -54,3 +65,36 @@ my_colors = ['blue', 'green', 'red', 'orange', 'blue']
 
 # use *
 ex_16 = ['summer', 'spring', 'fall', 'winter'] # create a string from this list and separate it with an asterisk
+
+
+
+'''
+You have a variable called hours which equals 24, the number of hours in a day.
+Print There are 24 hours in a day. Make sure to use your variable.
+First, print using commas. Remember that using commas automatically adds spaces!
+Now, print using string concatenation. Remember to cast hours to a string and manually add the spaces!
+
+'''
+
+
+'''
+Write some code that will print a box around a string.
+
+Examples:
+User input: hello
+*******
+*hello*
+*******
+
+User input: programming is fun
+********************
+*programming is fun*
+********************
+'''
+
+# get input
+
+
+# get length for top and bottom border
+
+# create output, dont forget to append asterisk to front and back of the string
