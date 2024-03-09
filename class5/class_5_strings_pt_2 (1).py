@@ -69,57 +69,96 @@ other_d = first_name[6]
 # print(other_d)
 
 
+
+
 '''Reverse indexing'''
 fav_animal = 'Ostrich'
 
 # print(fav_animal[-1])
-# print(fav_animal[-2])
-# print(fav_animal[-3])
-# print(fav_animal[-4])
+# # print(fav_animal[-2])
+# # print(fav_animal[-3])
+# # print(fav_animal[-4])
 # print(fav_animal[-5])
-# print(fav_animal[-6])
+# # print(fav_animal[-6])
 # print(fav_animal[-7])
-# print(fav_animal[-8]) # Lets note the error
+# print(fav_animal[-8]) # Lets note the error 'IndexError: string index out of range'
 
 # Using bracket notation and reverse indexing, access the letter g, the letter i, the letter p
 fav_season = 'spring'
+letter_g = fav_season[-1]
+letter_i = fav_season[-3]
+letter_p = fav_season[-5]
 
+# print(letter_g)
+# print(letter_i)
+# print(letter_p)
+
+g = fav_season[5]
+i = fav_season[3]
+p = fav_season[1]
+
+# print(g)
+# print(i)
+# print(p)
 
 
 ''' Slicing '''
 # There are 3 parameters available with indexing with bracket notation [start:stop:step]
 fav_food = 'spaghetti'
-
+slice_of_fav_food = fav_food[2:6] #excludes character that you stop at
+# prediction: 'aghe'
+# print(slice_of_fav_food)
 
 # Using slicing please create a string that accesses 'rica' in 'America'
 
 country = 'America'
-
+slice_of_country = country[3:7]
+# print(slice_of_country)
 
 # Using slicing please create a string that accesses 'ora' in 'Dora the explorer'
 cartoon = 'Dora the explorer'
-
+slice_of_cartoon = cartoon[1:4]
+# print(slice_of_cartoon)
 
 # Using slicing please create a string that accesses 'explo' in 'Dora the explorer'
-
+second_slice_cartoon = cartoon[9:14]
+# print(second_slice_cartoon)
 
 # Using slicing please create a string that accesses 'albo' in 'Rocky Balboa'
 boxer = 'Rocky Balboa'
+slice_boxer = boxer[7:11]
+# print(slice_boxer)
 
+'''STEPPING'''
 # Let's step through this string 2 characters at a time
 superheroine = 'Wonder Woman'
+# print(superheroine[2:len(superheroine):2]) #start stop and step through
+
+# print(superheroine[0:len(superheroine):2])
+# prediction: Wne oa
 
 # Lets step through this entire word and skip by 4
 word = 'Supercalifragilisticexpialidocious'
+# print(word[0:len(word):4])
+
 
 
 '''Slicing in reverse '''
+random_word = 'daycare' # Excludes the start character
+"""IF A WORD NEEDS TO BE SET IN REVERSE:"""
+# print(random_word[::-1]) # Full daycare in reverse
 
-animal = 'daycare' # Excludes the start character
-# print(animal[::-1]) # Full daycare in reverse
-# print(animal[5:0:-1]) # aycar
-# print(animal[6:0:-1]) # eracya
+'''FOCUS ON THIS it is tricky'''
+print(random_word[5:0:-1]) # racya
+# step 1: count backwards 5 excluding zero
+# step 2: include the word you stopped at 
+#why does it exclude e?
+#because it excludes the start character
 
+
+print(random_word[6:0:-1]) #eracya
+#why does it exclude d?
+#
 
 '''
 Write some code to print the second half of a string.
@@ -130,6 +169,16 @@ python
 hon
 
 '''
+#create variable
+word = 'python'
+#create a variable for half of word
+half = int((len(word) / 2)) #len was a float but we need an integer
+# print(half) #test
+
+#Create final bracket notation
+new_word = word[half:len(word)] #first half : rest of word
+print(new_word)
+
 
 
 '''
