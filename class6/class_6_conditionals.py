@@ -213,21 +213,21 @@ This is something else
 else
 
 '''
-user_input = input('Please input your string: ')
+# user_input = input('Please input your string: ')
 
-if user_input.isdigit():
-    print('This is a digit')
-elif user_input.isalpha():
-    print('This is a word')
-else:
-    print('This is something else')
+# if user_input.isdigit():
+#     print('This is a digit')
+# elif user_input.isalpha():
+#     print('This is a word')
+# else:
+#     print('This is something else')
 
 
 '''Chaining Conditionals code results'''
 
 # Mutually exclusive
     
-# temp_f = 35
+# temp_f = 39
 # if temp_f > 70:
 #     print("It is hot outside")
 # elif temp_f > 40:
@@ -237,7 +237,7 @@ else:
 
 
 # result - evaluated separately and multiple of them could be run
-    
+# these are not mutually exclusive    
 # temp_f = 75
 # if temp_f > 70:
 #     print("It is hot outside")
@@ -246,7 +246,7 @@ else:
 # if temp_f <= 40:
 #     print("It's cold outside")
 
-# 70 won't run
+# 70 won't run because no =70
 # temp_f = 70
 # if temp_f > 70:
 #     print("It is hot outside")
@@ -256,15 +256,17 @@ else:
 #     print("It's cold outside")
 
 
-# nested conditionals
+# nested conditionals - stacking conditions until it is true
 num = 5
 
-# if num % 2 == 1:
-#     if num < 10:
-#         if num > 0:
+# if num % 2 == 1: #checks for odd number #if correct will move to next line
+#     if num < 10: #checks if single digit #if correct will move to next line
+#         if num > 0: #checks if number is positive #if correct will print:
 #             print("This is a single digit odd number")
 
-# if num % 2 and num < 10 and num > 0:
+
+
+# if num % 2 and num < 10 and num > 0: #logical operators work like the nested conditionals.
 #     print("This is a single digit odd number")
 
 
@@ -281,15 +283,21 @@ If they match, print “Login successful.” If they don't, print “Incorrect u
 
 
 
-# Prompt the user to enter their username and password using the input() function.
+# Prompt the user to enter their username and password using the input() function. Be sure to sanitize your data.
+username = input('Please enter your username: ').strip()
 
+password = input('Please enter your password: ').strip()
 
 # Create two variables called username and password and set them to any valid string values.
+real_username = 'ajohns81'
+real_password = 'python14*'
 
+# Create your conditional, includes your comparison
 
-# Create your conditional
-
-
+if username == real_username and password == real_password:
+    print(f'Hello {real_username}, your login was sucessful!')
+else:
+    print('Incorrect Username or Password')
 
 
 
