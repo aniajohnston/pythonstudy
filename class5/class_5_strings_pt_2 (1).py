@@ -149,14 +149,14 @@ random_word = 'daycare' # Excludes the start character
 # print(random_word[::-1]) # Full daycare in reverse
 
 '''FOCUS ON THIS it is tricky'''
-print(random_word[5:0:-1]) # racya
+# print(random_word[5:0:-1]) # racya
 # step 1: count backwards 5 excluding zero
 # step 2: include the word you stopped at 
 #why does it exclude e?
 #because it excludes the start character
 
 
-print(random_word[6:0:-1]) #eracya
+# print(random_word[6:0:-1]) #eracya
 #why does it exclude d?
 #
 
@@ -177,7 +177,14 @@ half = int((len(word) / 2)) #len was a float but we need an integer
 
 #Create final bracket notation
 new_word = word[half:len(word)] #first half : rest of word
-print(new_word)
+# print(new_word)
+
+"""Shortened form"""
+# print(word[int((len(word) / 2)):len(word)]) #start parameter : end parameter
+
+
+
+
 
 
 
@@ -196,10 +203,18 @@ Test your code on a few inputs to make sure it works!
 '''
 
 # Get input 
+email = input('Hello, please enter your email address: ')
+# print(email)
 
-# Clean input
+# Sanatize data
+email = email.strip()
+# print(email)
 
 # Test 1: It has a "." at the third-to-last index
+test_1 = email[-4] == '.'
+# print(test_1)
+print('Does it have a "." at the second to last index?',test_1)
+
 
 # Test 2: It has exactly one "@" symbol, at the fifth-to-last index or earlier
 
