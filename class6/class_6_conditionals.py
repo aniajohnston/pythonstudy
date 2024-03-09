@@ -300,5 +300,11 @@ else:
     print('Incorrect Username or Password')
 
 
+'''Ask the user for a number, and keep asking them for the number until they enter a number'''
 
+# while True:
+#     user_input = input('Please enter a number: ')
 
+#     if user_input.isdecimal():
+#         print('Thanks for entering a number, have a great day!')
+#         break
