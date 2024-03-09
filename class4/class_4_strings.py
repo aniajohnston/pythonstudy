@@ -142,7 +142,8 @@ ex_7 = 'Dichlorodifluoromethane' # find the position of the letter f
 # print(ex_7.index('f'))
 
 word_8 = 'Supercalifragilisticexpialidocious'
-
+# print(word_8.find('g')) # needs a parameter #argument is 'g' #gives us 12 and counts 0
+# print(word_8.index('g'))
 
 '''Fun Fact - Both index() and find() are identical in that they return the index position of the first occurrence of the substring from the main string. The main difference is that Python find() produces -1 as output if it is unable to find the substring, whereas index() throws a ValueError exception.'''
 
@@ -150,33 +151,50 @@ word_8 = 'Supercalifragilisticexpialidocious'
 # isalnum() Are all my characters alphanumeric? Alphanumeric is A-Z, a-z and 0-9
 
 test_1 = 'abcdef'
-test_2 = '%$123'
+test_2 = '%$123' #not a-z or 0-9
 
+# print(test_1.isalnum())
+# print(test_2.isalnum())
 
 ex_8 = '123*' # Am I alphanumeric?
+# print(ex_8.isalnum())
+
 
 # isalpha() Are all characters in the string in the alphabet?
 
 test_3 = 'abcde'
-test_4 = '012345'
+test_4 = '012345' #is not in the alphabet
+# print(test_3.isalpha())
+# print(test_4.isalpha()) 
 
 ex_9 = 'LMN0P' # Are we all in the alphabet
+# print(ex_9.isalpha()) #looks like an O but is actually a zero
+
+
 
 # isdecimal() Are all characters decimals?
 
 test_5 = '1234P'
 test_6 = '234567'
+# print(test_5.isdecimal()) #false because P isalpha
+# print(test_6.isdecimal())
 
 
 ex_11 = '123456' # Check for decimals?
+# print(ex_11.isdecimal())
+
 
 # isdigit() Are all characters digits?
 
-test_7 = 'H1234'
+test_7 = 'H1234' #has a word in here
 test_8 = '9876'
+# print(test_7.isdigit())
+# print(test_8.isdigit())
 
 
 ex_10 = '123Hello' # Check for digits!
+# print(ex_10.isdigit())
+
 
 ''' Fun fact isdecimal() method supports only Decimal Numbers. isdigit() method supports Decimals, Subscripts, Superscripts. 
 isnumeric will check for unicode characters
@@ -187,44 +205,67 @@ isnumeric will check for unicode characters
 
 test_9 = 'Zebra'
 test_10 = 'affordable'
-
+# print(test_9.islower()) #is this lower?
+# print(test_10.islower())
 
 ex_12 = 'Username' # check if all lowercase
+# print(ex_12.islower()) #False because not ALL lowercase
+
 
 # isupper() lets check for ALL uppercase
-
 test_11 = 'Marshall'
 test_12 = 'HALLOWEEN'
-
+# print(test_11.isupper()) #false because only one uppercase character
+# print(test_12.isupper())
 
 ex_13 = 'TEMPLE' # check if uppercase
+# print(ex_13.isupper())
+
+
 
 # isspace() Lets check for whitespace (someone enters nothing for an input)
+#if someone inputs nothing or a bunch of spaces
 
 test_13 = '    '
 test_14 = 'j      b    c'
-
+# print(test_13.isspace())
+# print(test_14.isspace()) #even if spaced out, returns False because there are characters
 
 ex_14 = '   ' # check if whitespace
+# print(ex_14.isspace())
 
 
 # istitle() Let's check for title case
 
 test_15 = 'Eye of the tiger'
 test_16 = 'Eye Of The Tiger'
-
+# print(test_15.istitle())
+# print(test_16.istitle())
 
 ex_15 = 'Tempus Fugit' # check for title casing
+# print(ex_15.istitle())
+
 
 # join() Joins the elements of an iterable to the end of the string
 
 my_colors = ['blue', 'green', 'red', 'orange', 'blue']
-
+# new_string = '-'.join(my_colors) #don't forget that join takes a parameter
+# print(new_string)
 
 ex_16 = ['summer', 'spring', 'fall', 'winter'] # create a string from this list and separate it with an asterisk
+# new_string_2 = '*'.join(ex_16)
+# print(new_string_2)
+
+
 
 # lower() Converts a string into lower case
-day = 'MONDAY'
+# day = 'MONDAY'
+# print(day.lower())
+# '''OR FOR READABILITY:'''
+# new_day = day.lower()
+# print(new_day)
+
+
 
 
 # partition() Returns a tuple where the string is partitioned into three parts
@@ -255,10 +296,22 @@ name = 'giraffe'
 
 ex_20 = 'summer' # Check if this string starts with an 's'
 
+
+
+
 # strip() Returns a trimmed version of the string
-username = '   jessica123    '
+# username = '   jessica123    '
+# clean_username = username.strip() #we are creating a variable for our strip method
+# print(clean_username)
+
 
 ex_21 = '  sportsfan876  ' # sanitize this string
+# clean_ex = ex_21.strip()
+# print(clean_ex)
+
+'''What is user input'''
+user_input = input('What is your name? ')
+# print(user_input)
 
 '''
 Write some code that will take a string from the user and print if it is a number or not.
