@@ -118,7 +118,8 @@ Try to input 95 into this code. What happens?'''
 #     print(f'Your score of {score} is a D.')
 # else:
 #     print(f'Your score of {score} is an F.') 
-'''When 95 is entered into this code, each if statement runs the code, and returns True because 95 >= 65 and >= 70 and >= 80 and >=90'''
+'''When 95 is entered into this code, each if statement runs the code, 
+and returns True because 95 >= 65 and >= 70 and >= 80 and >=90'''
 
 
 
@@ -137,8 +138,12 @@ This is even
 '''
 
 ''' Exercise solution with an elif and else'''
+# user_input = int(input('Please enter your number: '))
 
-
+# if user_input % 2 != 0:
+#     print(f'Your number {user_input} is odd.')
+# elif user_input % 2 == 0:
+#     print(f'Your number is even.')
 
 
 
