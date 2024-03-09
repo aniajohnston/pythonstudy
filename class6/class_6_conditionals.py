@@ -172,11 +172,11 @@ Unknown
 '''
 
 ''' Exercise solution(s)'''
-# user_input = input('Please enter your number: ')
+# user_input = input('Please enter your number: ') # we know that this is going to be a string.
 
-# if not user_input.isdecimal():
-#     print('Unknown.')
-# elif int(user_input) % 2 != 0:
+# if not user_input.isdecimal(): #we use a string method. It will look at a value and see if it 0-9, if nope... 
+#     print('Unknown.') #it will print this message.
+# elif int(user_input) % 2 != 0: #it will move down here and here is where we neeed to cast to an integer
 #     print(f'Your number {user_input} is odd.')   
 # else:
 #     print(f'Your number {user_input} is even.')
@@ -202,16 +202,25 @@ Write some code that takes in a string from the user and prints whether the stri
 Examples:
 User input: 7
 This is a number
+string method - isdigit
 
 User input: abcde
 This is a word
+string method -isalpha
 
 User input: 7!ab5
 This is something else
+else
 
 '''
+user_input = input('Please input your string: ')
 
-
+if user_input.isdigit():
+    print('This is a digit')
+elif user_input.isalpha():
+    print('This is a word')
+else:
+    print('This is something else')
 
 
 '''Chaining Conditionals code results'''
