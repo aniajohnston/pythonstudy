@@ -283,21 +283,20 @@ If they match, print “Login successful.” If they don't, print “Incorrect u
 
 
 
-# Prompt the user to enter their username and password using the input() function. Be sure to sanitize your data.
-username = input('Please enter your username: ').strip()
+# prompts the user to enter their username and password using the input() function and sanitizes
+username = input('Please enter your username: ').strip() #auto-clean data
 
-password = input('Please enter your password: ').strip()
+password = input('Please enter your password: ').strip() #auto-clean data
 
-# Create two variables called username and password and set them to any valid string values.
-real_username = 'ajohns81'
-real_password = 'python14*'
+# two variables called username and password  set to specific strings.
+real_username = 'ajohns81' #username string
+real_password = 'python14*' #password string
 
-# Create your conditional, includes your comparison
-
-if username == real_username and password == real_password:
-    print(f'Hello {real_username}, your login was sucessful!')
+# conditional with the comparison
+if username == real_username and password == real_password: #comparison
+    print(f'Hello {real_username}, your login was sucessful!') #output if sucessful
 else:
-    print('Incorrect Username or Password')
+    print('Incorrect Username or Password') #output if failed
 
 
 '''Ask the user for a number, and keep asking them for the number until they enter a number'''
