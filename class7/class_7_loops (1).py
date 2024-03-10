@@ -164,7 +164,7 @@ Example:
 Hint: remember to cast to int() for each digit in the loop
 '''
 
-user_input = input('Please enter your number:')
+# user_input = input('Please enter your number:')
 total = 0 #initialize
 
 #we will use our conditionals in the for loop
@@ -192,8 +192,35 @@ o is a vowel
 
 '''
 
+'''VERSION ONE'''
+# word = 'hello'
+# vowels = ['a', 'e', 'i', 'o', 'u']
 
+# # for w in word:
+# #     if w in vowels:
+# #         print(f'{w} is a vowel')
+# #     else:
+# #         print(f'{w} is a consonant')
 
+'''VERSION TWO'''
+# word = input('Please insert your word: ')
+# vowels = 'aeiou'
+
+# for w in word:
+#     if w in vowels:
+#         print(f'{w} is a vowel')
+#     else:
+#         print(f'{w} is a consonant')
+
+'''VERSION THREE'''
+
+# word = input('Please input your word:')
+
+# for w in word:
+#     if w in 'aeiou':
+#         print(f'{w} is a vowel')
+#     else:
+#         print(f'{w} is a consonant')
 
 ''' Exercise 
 You're working on a data analysis project for a company that looks at written text. You're only interested in letters from A-Z because you're analyzing language. However, the data you're given has some values that shouldn't be there.
@@ -201,7 +228,20 @@ Write a Python program that takes a string as input from the user, removes anyth
 You can loop through the string in a for loop, use the .isalpha() string method, and remember that strings are immutable, so you will have to build a new string from scratch using string concatenation.
 '''
 
+'''For loop with a conditional'''
+# result = '' #initialize
+# user_input = input('Please enter your data:')
 
+# for u in user_input:
+#     if u.isalpha():
+#         result += u
+#     else:
+#         print(f'Sorry {u} is not a letter')
+# print(result)
+
+
+
+    
 
 
 
