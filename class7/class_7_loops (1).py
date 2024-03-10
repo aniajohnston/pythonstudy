@@ -3,15 +3,32 @@
 ''' While Loops '''
 
 ''' While my start value is less than my end value, we will increment by 1'''
+# end = int(input('Please enter your number: '))
+# start = 0
 
-
+# while start < end:
+#     print(start)
+#     start += 1
+# starts at zero and ends at 24 if our input value is 25 because we use <
+# asks is 25 < 25, condition fails and it stops.
 
 ''' While my start value is less than my end value, we will decrement by one - You can stop the infinite loop by hitting ctrl + c'''
+# end = 20
+# start = 0
 
+# while start < end:
+#     print(start)
+#     start -= 1
 
+#make sure to hit ctrl c in terminal
 
 ''' Example Create a while loop that prints every integer from 1 to 10.'''
+# end = 11 #initialization
+# start = 1
 
+# while start < end: #condition
+#     print(start)
+#     start += 1
 
 
 '''
@@ -22,6 +39,22 @@ This allows you to take user input multiple times without writing multiple lines
 
 Lets look at code that will run infinitely until the user tells it to "stop"
 '''
+
+#initialize our string
+# userin = ''
+
+# while userin != 'stop' :
+#     userin = input("Please enter a word, or 'stop' to end the loop: ")
+#     print(userin)
+
+#assign multiple variables on one line
+# username, password, day_of_week, = 'hello', 'how', 'are you'
+# print(username)
+# print(password)
+# print(day_of_week)
+
+# initialize multiple variables on one line
+# username, password, day_of_week, = '', '', ''
 
 
 '''
@@ -38,15 +71,21 @@ If they match, print “Login successful” and end the program.
 '''
 
 # Set sys id and pass
+sys_id = 'admin'
+sys_password = 'password'
 
-
-# Prompt User
-
+# Prompt User - for people that get it right the first time, they will not enter the loop
+user_id = input('Please enter your username: ')
+user_password = input('Please enter your password:')
 
 # Our initial check, while not equal we will enter loop
+while sys_id != user_id and sys_password != user_password:
+    # we have entered the loop, this means the username and password did not match.
+    print('Incorrect username and password')
+    user_id = input('Please enter your username: ')
+    user_password = input('Please enter your password:')
 
-
-
+print('Login Sucessful!') #this is outside of the loop
 ''' For Loops '''
 
 # STRING
