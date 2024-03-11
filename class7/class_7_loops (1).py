@@ -2,6 +2,58 @@
 
 ''' While Loops '''
 
+# value = 1
+
+'''issue #1'''
+# while value <= 10:
+#     if value == 5:
+#         continue
+#     print(value)
+#     value += 1 # never get executed, loop pauses at 5
+
+'''issue #2'''
+# while value <= 10:
+#     value += 1
+#     print(value) #loop prints 5 before 
+#     if value == 5: #skipping 5
+#         continue
+
+'''issue #3'''
+# while value <= 10:
+#     print(value) 
+#     if value == 5: 
+#         continue
+#     value += 1 # creates an infinite loop
+'''when value becomes 5, 'continue' sends the value back to the top
+and incriment never gets executed printing infinte '5' '''
+
+'''issue #4'''
+# while value <= 10:
+#     if value == 5:
+#         continue
+#     value += 1 
+#     print(value)
+'''Let's walk through the code when value is 5:
+value is 5.
+The if condition if value == 5: is true.
+The continue statement is executed, which causes the 
+loop to skip to the next iteration without executing the rest of 
+the loop body.
+The loop condition while value <= 10: is re-evaluated. 
+Since value remains 5 and the loop condition is still satisfied, 
+the loop continues.
+However, since the continue statement is encountered every time 
+value equals 5, the loop never gets a chance to execute 
+value += 1 after value is incremented to 5, and it remains 
+stuck in an infinite loop.'''
+
+'''correct method'''
+# while value <= 10:
+#     value += 1 
+#     if value == 5:
+#          continue
+#     print(value)
+
 '''STRING INITIALIZATION NOTES'''
 # # Initializing an empty string
 
