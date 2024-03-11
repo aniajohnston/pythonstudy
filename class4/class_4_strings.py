@@ -386,53 +386,6 @@ True
 # Output
 # print(f'Is {user_word} longer than {user_number}?',compare)
 
-'''
-Exercise 
-
-Write some code that takes a string from the user, and prints how many vowels are in the string. (Vowels are a, e, i, o, u)
-How will you count both uppercase and lowercase vowels?
-What string method can you use to count the number of vowels?
-
-Example
-User input: Computer
-3
-
-'''
-
-
-
-'''
-You have a variable called hours which equals 24, the number of hours in a day.
-Print There are 24 hours in a day. Make sure to use your variable.
-First, print using commas. Remember that using commas automatically adds spaces!
-Now, print using string concatenation. Remember to cast hours to a string and manually add the spaces!
-
-'''
-
-
-'''
-Write some code that will print a box around a string.
-
-Examples:
-User input: hello
-*******
-*hello*
-*******
-
-User input: programming is fun
-********************
-*programming is fun*
-********************
-'''
-
-# get input
-
-
-# get length for top and bottom border
-
-# create output, dont forget to append asterisk to front and back of the string
-
-
 
 
 

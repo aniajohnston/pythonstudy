@@ -36,17 +36,57 @@ userin = '' # initialization of variable
 #     userin = input("Enter something or hit stop to leave the loop")
 #     print(userin)
 
-while True:
-    userin = input("Enter something or hit stop to leave the loop ")
-    if userin == 'stop':
-        break
-    print(userin)
+# while True:
+#     userin = input("Enter something or hit stop to leave the loop ")
+#     if userin == 'stop':
+#         break
+#     print(userin)
 
 
 ''' Break in nested loops '''
+'''test one'''
+# i = 3
+# while i > 0:
+#     print(i)
+#     i -= 1
+#     if i == 4:
+#         break
+# else:
+#     print('done')
+'''test two'''
+# i = 6
+# while i > 0:
+#     print(i)
+#     i -= 1
+#     if i == 4:
+#         break
+# else:
+#     print('done') #does not print done because it breaks when it gets to four
 
+'''Next exercise'''
+# userin = '' 
+# #taking a string from the user until they hit stop
+# while userin != 'stop':
+#     userin = input("Please enter a word or hit stop to end the loop ")
 
+#     for l in userin: #looping through the input from the user
+#         if l.isalpha(): #testing to see if each character is in the alphabet
+#             print(l)
+#         else: break # break only breaks out of the for loop and goes back to userin = input()
+#     print("This is our next line")
 
+#for example, if we type in number, it will go back to userin = input() line
+
+'''next excercise'''    
+
+# while True:
+#     userinput = input('Please enter your word')
+#     print('We are on line 84')
+#     print(userinput)
+#     print("we are still in the while loop")
+#     break
+#     print('I do not get printed')
+# print('Why do I get printed?') #this is outside the loop
 
 '''
 Exercise
@@ -67,21 +107,71 @@ c
 Error: Not a number
 
 '''
+
+'''MY ATTEMPT'''
+# userin = ''
+# total = ''
+
+# while True:
+#     userin = input('Please enter a number: ')
+
+#     for u in userin:
+#         if u.isdigit():
+#             print(u)
+#             total += u
+#             print(total)
+#         else:
+#             break
+
+
+"""Prof attempt"""
+
 '''Declare any needed variables'''
 
+# user_input = ''
+# total_sum = 0
 
+'''Start our loop'''
+# while True:
+#     user_input = input('Please enter your number: ')
+#     '''Test for letter'''
+#     if user_input.isalpha():
+#             print('This is false.')
+#             break
+#     '''Convert to integer, end and print sum if zero, otherwise continue to add to sum'''
+#     user_input = int(user_input) #recast to integer
+#     '''When the user types 0, the program does the final calculation'''
+#     if user_input == 0:
+#         print(f'Sum: {total_sum}')
+#         break
+#     else:     
+#         total_sum += user_input
 
 
 ''' Continue keyword '''
 
+
+     
 ''' Example
 Use the continue keyword to loop through a string and only print the vowels.
 '''
 # Option 1
+# test_string = 'hello'
+# vowels = 'aeiou'
+# # vowels = ['a','e','i','o','u'] #use this for taken usernames
 
+# for t in test_string:
+#     if t in vowels:
+#         print(t)
+#     else:
+#         continue
 
 # Option 2
-
+# for t in 'aeiou': #shortens the code
+#     if t in vowels:
+#         print(t)
+#     else:
+#         continue
 
 
 ''' 
@@ -94,8 +184,31 @@ Print the sum of all the even digits at the end.
 Make sure to use the continue keyword.
 '''
 
+'''MY VERSION'''
+# user_input = input('Please enter your number: ')
+# user_sum = 0
 
+# for u in user_input:
+#      user_input = int(user_input)
+#      if user_input % 2 != 0:
+#         continue
+#      else:
+#          user_sum += user_input
+#          print(f'Your total is: {user_sum}')
 
+'''Professor's version'''
+# user_input, sum = '', 0
+
+# while True:
+#     user_input = input('Please enter your string: ')
+#     for u in user_input: #loop through the string entered by the user
+#         if u.isalpha():
+#             continue
+#         else:
+#             u = int(u) #recasting to a number
+#             if u % 2 == 0:
+#                 sum += u
+#     print(sum) #line this up with for
 
 ''' Break, Continue, and Pass '''
 
