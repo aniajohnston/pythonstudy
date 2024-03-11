@@ -2,6 +2,48 @@
 
 ''' While Loops '''
 
+'''STRING INITIALIZATION NOTES'''
+# # Initializing an empty string
+
+# user_input = ''
+# # Prompting the user for input until they enter 'quit'
+# while user_input != 'quit':
+#     user_input = input("Enter a value (type 'quit' to exit): ")
+#     # Perform operations based on user input
+#     print("You entered:", user_input)
+    
+# print("Exiting the loop.")
+
+
+# # Prompting the user for input before the while loop
+# user_input = input("Enter a value (type 'quit' to exit): ")
+
+# # Entering the while loop
+# while user_input != 'quit':
+#     # Perform operations based on user input
+#     print("You entered:", user_input)
+    
+#     # Prompting the user for input inside the loop
+#     user_input = input("Enter a value (type 'quit' to exit): ")
+
+# print("Exiting the loop.")
+
+
+"""print comes after +="""
+# x = 0
+# while x < 5:
+#     x += 1  # Increment x by 1
+#     print("Current value of x:", x)  # Print the updated value of x
+#12345
+
+# """print comes before +="""
+# x = 0
+# while x < 5:
+#     print("Current value of x:", x)  # Print the current value of x
+#     x += 1  # Increment x by 1
+#01234
+
+
 ''' While my start value is less than my end value, we will increment by 1'''
 # end = int(input('Please enter your number: '))
 # start = 0
