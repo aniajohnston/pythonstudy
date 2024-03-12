@@ -156,9 +156,9 @@ Error: Not a number
 Use the continue keyword to loop through a string and only print the vowels.
 '''
 # Option 1
-# test_string = 'hello'
+test_string = 'hello'
 # vowels = 'aeiou'
-# # vowels = ['a','e','i','o','u'] #use this for taken usernames
+# vowels = ['a','e','i','o','u'] #use this for taken usernames
 
 # for t in test_string:
 #     if t in vowels:
