@@ -7,7 +7,7 @@ How do I write a While Loop?
 
 '''
 # For Loop
-colors = ['green', 'blue', 'orange', 'yellow'] #you can solve the taken usernames problem
+# colors = ['green', 'blue', 'orange', 'yellow'] #you can solve the taken usernames problem
 
 # for c in colors: 
 #     print(c)
@@ -211,9 +211,23 @@ Make sure to use the continue keyword.
 #     print(sum) #line this up with for
 
 ''' Break, Continue, and Pass '''
+# word = 'hello'
+# vowels = 'aeiou'
 
+# for l in word:
+#     if l in vowels:
+#         print(l)
+#         break #broke after first vowel in word.
 
+# for l in word:
+#     if l in vowels:
+#         continue
+#     print(l)
 
+# for l in word:
+#     if l in vowels:
+#         pass #lets you skip the if condition
+#     print(l)
 
 '''
 Exercise
@@ -233,10 +247,32 @@ REQUIREMENTS
     If the string is a set of letters, concatenate to the other letter strings passed in.
     If it contains a symbol, or is none of the above, do nothing and repeat the loop.
 
-
 '''
 
 
 '''These variables will be placeholders for the total and new string we will be creating'''
+new_total = 0
+new_string = ''
 
+while True:
+    user_input = input("Please enter your data: ")
 
+    #if empty stop the loop
+    if len(user_input) == 0:
+        print('String is empty, stopping the loop')
+        break
+    #if the string is a number convert to a float and add it to a total
+    elif user_input.isnumeric():
+        user_input = float(user_input)
+        new_total += user_input
+        print(f'Updated total to {new_total}')
+        continue #VERY IMPORTANT, NEEDS TO BE HERE
+    #concatenate to new string
+    elif user_input.isalpha():
+        new_string += user_input
+        print(f'Your updated string is {new_string}')
+        continue
+    #check for special characters
+    elif not user_input.isalnum():
+        print(f'{user_input} is a special character, no action and lets continue')
+        continue
