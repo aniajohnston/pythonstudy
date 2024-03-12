@@ -276,3 +276,7 @@ while True:
     elif not user_input.isalnum():
         print(f'{user_input} is a special character, no action and lets continue')
         continue
+
+'''Error messages'''
+error_messages = ['Username taken', 'Password taken', 'Error message 3'] #you can index this for error messages
+#to reference error messages: print(error_messages[0])
