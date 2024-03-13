@@ -56,10 +56,10 @@ planets = ["mercury", "venus", "earth", "mars"]
 planets = ["mercury", "venus", "earth", "mars"]
 counter = 0 #initializes counter
 
-for p in planets:
-    print(f'{counter}: {p}', end=", ") #we use p because each object in the list is called p and the list is called planets
-    #end puts everything into the same line
-    counter += 1
+# for p in planets:
+#     print(f'{counter}: {p}', end=", ") #we use p because each object in the list is called p and the list is called planets
+#     #end puts everything into the same line
+#     counter += 1
 
 
 
@@ -73,17 +73,35 @@ Make sure you filter out any repeats.
 
 data = ['car', 3, True, False, 4.09, 'Tuesday']
 
+the method you need to use is called: append() this adds values to a list
 '''
-# Our collections
 
+fname = 'Annie'
+is_warm_out = True
+temp = 98
+
+# print(type(fname))
+# print(type(is_warm_out))
+# print(type(temp))
+
+
+# Our collections
+data = ['car', 3, True, False, 4.09, 'Tuesday']
+types_list = [] #initializing the list
 
 # Looping through for types
-
-
+for d in data:
+    # print(d)
+    # print(type(d))
+    types_list.append(type(d)) #grabbing the types from data and appending to an empty list
+# print('Our Types List which contains duplicates',types_list)
 
 # Optional, remove repeats using sets
-
-
+# sets never have duplicates
+#change from list to set
+#change back to list
+types_list = list(set(types_list)) #changing to a set removes duplicates
+# print('Duplicates removed with sets', types_list)
 ''' List Methods '''
 
 '''
