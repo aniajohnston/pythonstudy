@@ -18,17 +18,21 @@ while True:
     username = username.strip()
 
     if not username[0].islower():
-        break
+        continue
     # the username must not be in the list of taken usernames
     elif username in taken:
         print(username, error_messages[1])
-        break
+        continue
     # must contain numbers and letters
     for char in username:
         if not char.isalnum():
-            break
+            print(username, error_messages[0])
+            continue
+
+   
+
     #must only include an underscore
-    for char in username
+    # for char in username
    
     # else:
     #     continue
@@ -46,6 +50,8 @@ contain at least one special characters
 doesn't contain spaces
 '''
 
+'''password in while true'''
+'''try login prompt'''
 
 
 #password contains at least one special character
