@@ -3,20 +3,44 @@
 
 # Indexing
 planets = ['mercury', 'venus', 'earth', 'mars', 'jupiter']
-
+'''assigning to a variable'''
+# first_planet = planets[0]
+# print(first_planet)
+'''printing index'''
+# print(planets[0])
+# print(planets[1])
+# print(planets[2])
+# print(planets[3])
+# print(planets[4])
+# print(planets[5])
+# print(planets[6])
+# print(planets[7]) #IndexError: list index out of range
 
 # Update with indexing
 colors = ['red', 'green', 'yellow', 'blue', 'orange']
-
+# print('first_list',colors)
+colors[0] ='black'
+colors[1] = 'orange'
+# print('after_update',colors)
+my_color = colors.index('blue') #this will deliver the value of 3 
+#it returns the position of the object
+# print(my_color)
 
 
 # Iterate with for loop
 animals = ['dog', 'cat', 'lion', 'tiger', 'eagle']
 
+# for a in animals:
+#     print(a)
 
 
 # Len function gives us the amount of items in a list
 modes_of_travel = ['car', 'plane', 'truck', 'train', 'boat']
+# how_many_vehicles = len(modes_of_travel)
+# print(how_many_vehicles)
+# print(len(modes_of_travel)) 
+'''you don't need to assign to new variable with lists
+like you do with string methods'''
 
 
 '''
@@ -29,6 +53,13 @@ planets = ["mercury", "venus", "earth", "mars"]
 0: mercury, 1: venus, 2: earth, 3: mars
 
 '''
+planets = ["mercury", "venus", "earth", "mars"]
+counter = 0 #initializes counter
+
+for p in planets:
+    print(f'{counter}: {p}', end=", ") #we use p because each object in the list is called p and the list is called planets
+    #end puts everything into the same line
+    counter += 1
 
 
 
