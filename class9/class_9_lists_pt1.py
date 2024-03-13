@@ -117,49 +117,73 @@ remove() Removes the first item with the specified value
 reverse() Reverses the order of the list
 sort() Sorts the list
 
+
 '''
 
 food = ['ice cream', 'pizza', 'apple', 'burger', 'cookies']
 
 # lets add salad with append
-
+# food.append('salad')
+# print(food)
 
 
 # lets remove all items with clear
-
+# food.clear()
+# print(food) #list is now empty
+#opposite of the append method
 
 
 # let create a copy
-
+new_food_list = food.copy() 
+food.append('asparagus')
+# print(f'This is our copy',new_food_list)
+# print(f'This is our original list',food)
 
 # How many times does pizza appear?
-
+pizza_count = food.count('pizza')
+# print(pizza_count)
 
 # Lets add items of a list to our food list
 vegetables = ['carrots', 'asparagus', 'broccoli']
-
+food.extend(vegetables)
+# lets us merge lists together
+# print(food)
 
 # lets find the index value for apple
+index_food = food.index('apple')
+# print(f'The index of the apple is',index_food)
+'''OR'''
+# print(f'The index of the apple is',food.index('apple'))
 
-# Lets add cereal to the 3rd spot in our list
+# Lets add cereal to the 3rd spot in our list #insert takes 3 parameters
+food.insert(3,'cereal')
+# print(food)
 
+# Lets remove a food by index position #pop method
+food.pop(0)
+# print(food) #icecream is gone
 
-# Lets remove a food by index position
-#
 
 # Lets remove an item with a specified value
+food.remove('burger')
+# print(food) #ONLY the first instance of burger is gone
+
+#to remove all instances, clear() method works best
 
 
 # Lets reverse our list
-
+food.reverse()
+# print(food)
 
 
 # Lets sort our list
+food.sort()
+# print(food) #alphabatizes 
 
-
-# Sort versus sorted()
-
-# Sorted returns a newer sorted list
+# Sort versus sorted() #must assign to a new list
+new_sorted_list = sorted(food)
+print(new_sorted_list)
+# Sorted returns a newer sorted list in alphabetical order
 
 
 
