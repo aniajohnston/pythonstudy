@@ -2,7 +2,8 @@
 
 
 error_messages = ['Invalid username','Username taken', 'Invalid password', 'Sign up sucessful', 'Incorrect username or password', 'Login sucessful']
-characters = ['!','?','@','#','$','^','&','*','_','-']
+username_characters = ['!','?','@','#','$','^','&','*','-']
+password_characters = ['!','?','@','#','$','^','&','*','_','-']
 
 
 username = ''
@@ -15,17 +16,22 @@ while True:
     # password = input(f'\nPlease type your password.\n It must contain at least 8 characters\n at least one uppercase letter\n at least one lowercase letter\n at least one digit\n one of these characters:{characters}\n cannot contain spaces \n\n PASSWORD:')
     #must be lowercase at the start
     username = username.strip()
+
     if not username[0].islower():
-        break
-    # must contain numbers and letters
-    elif not username.isalnum():
         break
     # the username must not be in the list of taken usernames
     elif username in taken:
         print(username, error_messages[1])
         break
-    else:
-        continue
+    # must contain numbers and letters
+    for char in username:
+        if not char.isalnum():
+            break
+    #must only include an underscore
+    for char in username
+   
+    # else:
+    #     continue
 '''username requirements:
 only use underscores
 '''
