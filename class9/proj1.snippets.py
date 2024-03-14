@@ -4,8 +4,13 @@ import re
 ''' What are some of the things we may come across while building this project'''
 
 '''Initialization and prompt (and testing)'''
+first_input, second_input = '','' #initialization for username and password
 
-
+while True:
+    first_input = input('Please enter your data')
+    second_input = input('Please enter your data')
+    print(first_input,second_input)
+    break
 
 '''Handling error messages with a list (and testing)'''
 

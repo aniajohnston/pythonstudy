@@ -168,7 +168,8 @@ food.pop(0)
 food.remove('burger')
 # print(food) #ONLY the first instance of burger is gone
 
-#to remove all instances, clear() method works best
+'''to remove all instances, clear() method works best'''
+
 
 
 # Lets reverse our list
@@ -182,7 +183,7 @@ food.sort()
 
 # Sort versus sorted() #must assign to a new list
 new_sorted_list = sorted(food)
-print(new_sorted_list)
+# print(new_sorted_list)
 # Sorted returns a newer sorted list in alphabetical order
 
 
@@ -194,18 +195,33 @@ Exercise: List of Pets
 You want to make a list containing the types of pets that the user has. Keep prompting the user for a pet until they enter "stop". If it's a new pet, add it to the list. If the list already has that pet, don't add it.
 
 '''
+user_input = '' #initialize user input
+pet_name = [] #initialize pets list
 
+# while user_input != 'stop': #stop ends the user_input conditionals and takes the user out of the list displaying the names
+#     user_input = input('Please enter your pets name: ')
+#     if user_input == 'stop': #this is to not add stop to the list
+#         break
+#     elif user_input not in pet_name:
+#         pet_name.append(user_input)
+#     else:
+#         print(f'{user_input} is already in the list')
+# print(pet_name) #outside of the list
 
-
-''' Removing duplicates from a list, but leaving 1'''
+''' Removing duplicates from a list, but leaving 1 '''
 
 colors = ['blue', 'blue', 'blue', 'green', 'red', 'blue', 'blue']
 
 # Option 1 
-
+new_colors = []
+for c in colors: #looping though the original list
+    if c not in new_colors:
+        new_colors.append(c)
+# print(new_colors)
 
 # Option 2 - Using Sets
-
+colors = list(set(colors))
+# print(colors)
 
 
 
