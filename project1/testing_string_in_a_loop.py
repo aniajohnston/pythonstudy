@@ -1,7 +1,7 @@
 import re
 
 '''
-You are testing a string to a while loop. The string must pass the following tests or the user must start over, be sure to tell the user the error.
+You are testing a string through a while loop. The string must pass the following tests or the user must start over, be sure to tell the user the error.
 
 1. String must be at least 10 characters
 2. String must contain at least 1 number
@@ -19,14 +19,20 @@ Sd@sdjsdf0 - should pass all tests
 '''
 
 while True:
-    user_input = input("Please enter your string ")
-    print(user_input)
-    break
+    user_input = input("Please enter your string: ")
+
 
     # Not enough characters
-    
+    if len(user_input) >= 10:
+        print(f'Test Passed: {user_input} is greater than 10 characters')
+        #if test is passed, this will move down to the next test.
+    else:
+        print(f'Test Failed: {user_input} is less than 10 characters')
+        continue #if fails they will get sent back to the top
+
     # Contain at least 1 number
-  
+    print("Lets test for contains 1 number")
+    break
     # Contains at least 1 capital letter
 
     # Contains '@' symbol
