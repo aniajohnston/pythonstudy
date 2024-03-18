@@ -49,7 +49,8 @@
 # Modulo/Mod/Remainder
 # print(5 % 2) #the remainder is 1 #helps you solve if a number is even or odd.
 # print(10 % 4) #the answer should be 2
-# Program to find the perimeter of a rectangle
+
+
 
 # Program to find the perimeter of a rectangle
 # Perimeter = 2* (length + width)
@@ -65,22 +66,22 @@
 # Data Types
 
 
-# Integer
+# Integer and kind
 # num_one = 5
 # print(num_one)
 # print(type(num_one))
 
-# String
+# String and kind
 # string_one = 'this is a string'
 # print(string_one)
 # print(type(string_one))
 
-# Bool
+# Bool and kind
 # technical_errors = True
 # print(technical_errors)
 # print(type(technical_errors))
 
-# Float
+# Float and kind
 # num_two = 1.22
 # print(num_two)
 # print(type(num_two))
@@ -93,7 +94,7 @@
 # print(first_name, last_name)
 
 
-# List 
+# List and kind 
 # student_grades = [100, 95, 70, 85, 40] #always in brackets
 # print(student_grades)
 # print(type(student_grades))
@@ -104,7 +105,7 @@
 
 
 
-# Dictionary
+# Dictionary and kind
 # demographic_info = {"First Name": "Ania",
 #                     "Last Name": "Johnston",
 #                     "State": "New York"}
@@ -124,7 +125,7 @@
 # new_num = str(my_number) #called a 'stir'
 # print(type(new_num))
 
-# Fav Colors
+# Length of Fav Colors
 # colors = ['blue','green','red','brown'] #this list item has four elements
 # num_colors = len(colors) #calculates how many elements are in your list
 # print(num_colors)
@@ -150,15 +151,19 @@
 
 
 # Fahrenheit to Celsius
+# Celcius = ((Farenheit - 32) * 5/9)
 # F = 89
 # C = ((F -32)* 5/9)
 # print(C)
 
 
 
-# Eval let's you get a boolean value if true or false.
+# Eval does what?
 # cold_weather = 'True'
 # print(eval(cold_weather))
+
+# new = eval('True')
+# print(new)
 
 '''
 # You are given a triangle with a side #1 of 4, base of 6, and side #2 of 3. Create
