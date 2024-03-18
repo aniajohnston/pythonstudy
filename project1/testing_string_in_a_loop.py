@@ -31,10 +31,15 @@ while True:
         continue #if fails they will get sent back to the top
 
     # Contain at least 1 number
-    print("Lets test for contains 1 number")
-    break
+    contains_num = re.search(r'\d', user_input) #will look for digit in the string and display True or False
+    if contains_num: #auto means true because of re
+        print(f'Test Passed: {user_input} contains a number')
+    else:
+        print(f'Test Failed: {user_input} does not contain a number')
+        continue
     # Contains at least 1 capital letter
-
+    print("I am here")
+    break
     # Contains '@' symbol
     
     # Contains no spaces
