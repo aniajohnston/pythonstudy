@@ -45,11 +45,22 @@ while True:
         print(f'Test Failed: {user_input} has no capital letters')
         continue
     # Contains '@' symbol
-    print("We made it to the @ symbol testing")
-    break
-    # Contains no spaces
+    if '@' in user_input:
+        print(f'Test Passed: {user_input} contains an \'a\' symbol')
+    else:
+        print(f'Test Failed: {user_input} does not contain an \'a\' symbol')
+        continue
     
-        
+    # Contains no spaces
+    has_space = re.search(r'\s', user_input)
+    if not has_space: #let's you make whatever condition opposite
+        print(f'Test Passed: {user_input} does not contain a space')
+        print('Congrats all testing passed')
+    else:
+        print(f'Test Failed: {user_input} contains a space')
+        continue
+       
+    break    
 
 
 
