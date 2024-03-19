@@ -36,7 +36,6 @@ error_messages = ['Invalid Username:','Username Taken:', 'Invalid Password:', 'S
 taken = ['admin', 'admin123', 'superuser', 'superuser123']
 
 
-
 while True:
     #username
     username = input('\nPlease enter your username.\nIt must follow python conventions(only contain letters, numbers, and underscores)\nIt must not be in the list of taken usernames:\n\n\t"admin", "admin123", "superuser", "superuser123"\n\nUsername: ')
@@ -73,5 +72,22 @@ while True:
     if len(password) >= 8:
         print(f'Test Passed: {password} is greater than 8 characters')
     else:
-        print(f'Test Failed: {password} is less than 8 characters')
+        print(f'{error_messages[2]} {password} is less than 8 characters')
         continue
+
+    #must contain at least one uppercase
+
+    #must contain at least one lowercase
+
+    #must contain at least one digit
+
+    #special characters
+    
+    special_characters = re.compile('[!?@#$^&*_-]')
+    
+    if(special_characters.search(password) != None):
+        print(f'Test Passed: {password} contains special characters')
+    else:
+        print(f'{error_messages[2]} {password} does not contain special characters')
+    
+    #no spaces
