@@ -17,7 +17,7 @@ Sdksdjsdf0 - at least 10 characters, contains number, has caps, no @ symbol
 Sd@sdjs df0 - at least 10 characters, contains number, has caps, @ symbol, contains a space
 Sd@sdjsdf0 - should pass all tests
 '''
-
+user_input, re_prompt_user = '', '' # initialization
 while True:
     user_input = input("Please enter your string: ")
 
@@ -59,8 +59,16 @@ while True:
     else:
         print(f'Test Failed: {user_input} contains a space')
         continue
-       
-    break    
+    
+    re_prompt_user = input('Congrats on signing up, please login:')
+
+    if user_input == re_prompt_user:
+        print(f'Thank you {user_input} your input is working.')
+        break
+    else:
+        print(f'{re_prompt_user} does not match {user_input}, please start over.')
+        continue
+      
 
 
 
