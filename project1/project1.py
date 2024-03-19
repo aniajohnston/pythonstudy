@@ -82,12 +82,16 @@ while True:
     #must contain at least one digit
 
     #special characters
-    
     special_characters = re.compile('[!?@#$^&*_-]')
-    
     if(special_characters.search(password) != None):
         print(f'Test Passed: {password} contains special characters')
     else:
         print(f'{error_messages[2]} {password} does not contain special characters')
     
     #no spaces
+    space = re.search(r'\s', password)
+    if not space: #let's you make whatever condition opposite
+            print(f'Test Passed: {password} does not contain a space')
+    else:
+        print(f'{error_messages[2]} {password} contains a space')
+        continue
