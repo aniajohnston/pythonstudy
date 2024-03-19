@@ -30,7 +30,14 @@ error_messages = ['Invalid Username:','Username Taken:', 'Invalid Password:', 'S
 while True:
     username = input('\nPlease enter your username.\nIt must follow python conventions(only contain letters, numbers, and underscores)\nIt must not be in the list of taken usernames:\n\n\t"admin", "admin123", "superuser", "superuser123"\n\nUsername: ')
     #must start with a lowercase letter
-
+    first_letter = username[0]
+    lower_case_test = first_letter.islower()
+    if lower_case_test:
+        print(f'Test Passed: {username} starts with a lowercase letter.')
+        break
+    else:
+        print(f'{error_messages[0]} {username} does not start with a lowercase letter.')
+        continue
     #contains letters, numbers, underscores
     py_conventions = bool(re.match("^[A-Za-z0-9_-]*$", username))
     if py_conventions:
