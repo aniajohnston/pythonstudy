@@ -24,6 +24,7 @@ Test data
 username, password = '',''
 
 error_messages = ['Invalid Username:','Username Taken:', 'Invalid Password:', 'Sign up sucessful!', 'Incorrect Username or Password:', 'Login sucessful!']
+taken = ['admin', 'admin123', 'superuser', 'superuser123']
 
 
 
@@ -34,7 +35,7 @@ while True:
     lower_case_test = first_letter.islower()
     if lower_case_test:
         print(f'Test Passed: {username} starts with a lowercase letter.')
-        break
+    
     else:
         print(f'{error_messages[0]} {username} does not start with a lowercase letter.')
         continue
@@ -45,4 +46,9 @@ while True:
     else:
         print(f'{error_messages[0]} {username} does not follow python conventions.')
         continue
-    #
+    #must not be in the list of taken usernames
+    if username not in taken:
+        print(f'Test Passed: {username} is not in the list of taken usernames.')
+    else:
+        print(f'{error_messages[1]} {username} is in the list of taken usernames.')
+        continue
