@@ -42,3 +42,4 @@ equal = base == side_one
 
 #output for equality
 # print('Is the base equal to side one?',equal)
+

@@ -14,7 +14,6 @@ first_name = 'Thomas' ''' Multi-line comments can be inline '''
 last_name = 'The Train' """ Holding shift and clicking double quotes three times makes an inline comment as well """
 
 
-
 '''
 Will be a multi line comment
 
@@ -55,19 +54,19 @@ An inline comment is a comment on the same line as a statement. Inline comments 
 
 #we are solving for the perimeter of a rectangle
 
-length = 5  #this is the length of our rectangle
-width = 7  #this is the width of our rectangle
-# Perimeter of my rectangle
-perimeter = 2 * (length + width)
-# print(perimeter) #here we printed the answer
+# length = 5  #this is the length of our rectangle
+# width = 7  #this is the width of our rectangle
+# # Perimeter of my rectangle
+# perimeter = 2 * (length + width)
+# # print(perimeter) #here we printed the answer
 
 
-# Comment me!
-# Tuesday's temperature
-fahrenheight = 89 
-# Convert farenheight to celcius
-celsius = (fahrenheight - 32) * 5/9
-# print(celsius) #here we test
+# # Comment me!
+# # Tuesday's temperature
+# fahrenheight = 89 
+# # Convert farenheight to celcius
+# celsius = (fahrenheight - 32) * 5/9
+# # print(celsius) #here we test
 
 
 '''Shortcut operators'''
@@ -113,9 +112,13 @@ celsius = (fahrenheight - 32) * 5/9
 # pizza_slices = 8
 # pizza_slices /= 2
 # print(pizza_slices) 
-'''Does division always return a float?'''
 
-# Divide by 7 /
+
+'''Does division always return a float?
+
+YES'''
+
+#Divide by 7 /
 # fees = 8.90
 # fees /= 7
 # print(fees)
@@ -169,24 +172,27 @@ fit into the variable value'''
 # Refactor the fahrenheit/celsius converter using shortcut operators
 
 '''without shortcut operators'''
-farenheit = 89 
+# farenheit = 89 
 # celsius = (farenheit - 32) * 5/9
 # print(celsius)
-'''with shortcut operators'''
+# '''with shortcut operators'''
 # farenheit = 89
 # farenheit -= 32
 # farenheit *= 5/9
-'''think about this as casting a 
-variable to another variable'''
+# '''think about this as casting a 
+# variable to another variable'''
 # celcius = farenheit 
-# print(calcius)
+# print(celcius)
 
 ''' Boolean Operators'''
 
 # Is 7 less than 5? <
 # print(7 < 5)
+
 '''why do we asign to result?
 for readability'''
+
+
 # result = (7 < 5)
 # print(result)
 
@@ -201,7 +207,7 @@ for readability'''
 
 # Is 5 greater than or equal to 6? >=
 # result = (5 >= 6)
-# print(5 >= 6)
+# print(result)
 
 # Is 5 equal to 5? ==
 # print(5 == 5)
@@ -217,13 +223,12 @@ for readability'''
 # and
 '''and applies boolean to however 
 many results are run together'''
-# print(5 == 5 and 4 == 4 and 2 == 2) #this is true because both are true
+#this is true because both are true
 # print(2==2 and 3 == 2) #this is false because one is false
 # print(1==0 and 3==5) #this is false because both are false
 
 '''You can use and to link variables together
 and check for Boolean'''
-# Values from example 1 can be stored in variables
 # logic_1 = (5 == 5)
 # logic_2 = (4 == 4)
 # print(logic_1 and logic_2)
@@ -252,13 +257,12 @@ y = 7
 
 
 '''in '''
-# in
 # print('J' in 'January')
 # print('F' in 'March')
 
 # eval
 
-is_open = 'True'
-weekday = 'False'
-print(eval(is_open))
+# is_open = 'True'
+# weekday = 'False'
+# print(eval(is_open))
 
