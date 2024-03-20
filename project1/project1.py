@@ -38,7 +38,7 @@ taken = ['admin', 'admin123', 'superuser', 'superuser123']
 
 while True:
     #username
-    username = input('\nPlease enter your username.\nIt must follow python conventions(only contain letters, numbers, and underscores)\nIt must not be in the list of taken usernames:\n\n\t"admin", "admin123", "superuser", "superuser123"\n\nUsername: ')
+    username = input('\nPlease enter your username.\nIt must start with a lowercase letter.\nIt must follow python conventions(only contain letters, numbers, and underscores).\nIt must not be in the list of taken usernames:\n\n\t"admin", "admin123", "superuser", "superuser123"\n\nUsername: ')
     
     #must start with a lowercase letter
     first_letter = username[0]
@@ -66,7 +66,7 @@ while True:
         continue
 
     #password
-    password = input('\nPlease enter your password.\n')
+    password = input('\nPlease enter your password.\nIt must be at least 8 characters long.\nIt must contain at least one uppercase letter.\nIt must contain at least one lowercase letter.\nIt must contain at least one digit.\nIt must contain no spaces.\nIt must contain a special character from this list:\n\n!?@#$^&*_-\n\nPassword:')
 
     #must be at least 8 characters long
     if len(password) >= 8:
