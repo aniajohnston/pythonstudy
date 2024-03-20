@@ -80,13 +80,13 @@ while True:
     if one_uppercase:
         print(f'Test Passed: {password} contains a capital letter')
     else:
-        print(f'{error_messages[2]} {password} has no capital letters')
+        print(f'{error_messages[2]} {password} contains no capital letters')
         continue
     
     #must contain at least one lowercase
     lowercase_test = bool(re.match(r'^.*[a-z].*$', password))
     if lowercase_test:
-        print("This works!")
+        print(f'Test Passed: {password} contains a lowercase')
     else:
         print(f'{error_messages[2]} {password} does not contain a lowercase')
         continue
@@ -111,8 +111,20 @@ while True:
     #no spaces
     space = re.search(r'\s', password)
     if not space:
-            print(f'Test Passed: {password} does not contain a space')
+            print(f'{error_messages[2]} {password} does not contain a space')
+            print(f'{error_messages[3]}')
     else:
         print(f'{error_messages[2]} {password} contains a space')
         continue
-        
+    
+    #reauthentication
+    sys_username = input('Please type in your username for reauthentication: ')
+    sys_password = input('Please type in your password for reauthentication: ')
+
+    
+    if sys_username == username and sys_password == password:
+        print(f'{error_messages[5]}')
+        break
+    else:
+        print(f'{error_messages[4]}')
+        continue
