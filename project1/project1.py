@@ -76,22 +76,37 @@ while True:
         continue
 
     #must contain at least one uppercase
-
+    one_uppercase = any(u.isupper() for u in password) # will deliver True False if capital happens in the string
+    if one_uppercase:
+        print(f'Test Passed: {password} contains a capital letter')
+    else:
+        print(f'{error_messages[2]} {password} has no capital letters')
+        continue
+    
     #must contain at least one lowercase
+    lowercase_test = bool(re.match(r'^.*[a-z].*$', password))
+    if lowercase_test:
+        print("This works!")
+        break
+    else:
+        print("NO!")
+
 
     #must contain at least one digit
 
+    
     #special characters
     special_characters = re.compile('[!?@#$^&*_-]')
     if(special_characters.search(password) != None):
         print(f'Test Passed: {password} contains special characters')
     else:
         print(f'{error_messages[2]} {password} does not contain special characters')
-    
+        continue
     #no spaces
     space = re.search(r'\s', password)
-    if not space: #let's you make whatever condition opposite
+    if not space:
             print(f'Test Passed: {password} does not contain a space')
     else:
         print(f'{error_messages[2]} {password} contains a space')
         continue
+        
