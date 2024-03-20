@@ -22,16 +22,13 @@ The password must:
 3. Contain at least one lowercase letter
 4. Contain at least one digit
 5. Contain at least one of these characters: !,?,@,#,$,^,&,*,_,-
-6. Cannot conain any spaces
-
-
-Test data
-
+6. Cannot contain any spaces
 '''
 
-
+#initialization
 username, password = '',''
 
+#lists 
 error_messages = ['Invalid Username:','Username Taken:', 'Invalid Password:', 'Sign up sucessful!', 'Incorrect Username or Password:', 'Login sucessful!']
 taken = ['admin', 'admin123', 'superuser', 'superuser123']
 
@@ -90,7 +87,6 @@ while True:
     else:
         print(f'{error_messages[2]} {password} does not contain a lowercase')
         continue
-
 
     #must contain at least one digit
     contains_num = re.search(r'\d', password) 
