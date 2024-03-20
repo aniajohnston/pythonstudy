@@ -87,13 +87,18 @@ while True:
     lowercase_test = bool(re.match(r'^.*[a-z].*$', password))
     if lowercase_test:
         print("This works!")
-        break
     else:
-        print("NO!")
+        print(f'{error_messages[2]} {password} does not contain a lowercase')
+        continue
 
 
     #must contain at least one digit
-
+    contains_num = re.search(r'\d', password) 
+    if contains_num:
+        print(f'Test Passed: {password} contains a number')
+    else:
+        print(f'{error_messages[2]} {password} does not contain a number')
+        continue
     
     #special characters
     special_characters = re.compile('[!?@#$^&*_-]')
@@ -102,6 +107,7 @@ while True:
     else:
         print(f'{error_messages[2]} {password} does not contain special characters')
         continue
+
     #no spaces
     space = re.search(r'\s', password)
     if not space:
