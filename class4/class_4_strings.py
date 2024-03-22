@@ -44,12 +44,13 @@ str2 = 'HELLO'.lower() #dot lower string method is being applied to this string
 ''' in - Returns True if a string appears inside another string (as a substring), and False otherwise.'''
 test_character = 'b'
 test_string = 'bananas'
-# is test_character in test_string
+# is test_character in test_string?
 # print(test_character in test_string)
 
 ''' create a quick test to see if the sub string 'spreh' can be found in the string 'Incomprehensibilities' '''
 test_chars = 'spreh'
 test_word = 'Incomprehensibilities'
+
 # print(test_chars in test_word)
 
 
@@ -67,6 +68,7 @@ length_of_alphabet = len(alphabet)
 animal = 'zebra'
 length_of_animal = len(animal)
 # print(length_of_animal)
+
 
 
 
