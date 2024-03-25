@@ -71,7 +71,6 @@ length_of_animal = len(animal)
 
 
 
-
 # String methods
 
 word_1 = 'happy' # capitalize me! capitalizes first letter

@@ -1,4 +1,4 @@
-new_string = "I am a double quote with a '@' single quote"
+new_string = "I am a double quote with a cat's or an '@' single quote"
 
 animal = 'cat\'s'
 # print(animal)
@@ -12,13 +12,13 @@ Now, print using string concatenation. Remember to cast hours to a string and ma
 
 hours = 24
 
-# # commas
+# commas
 # print('There are',hours,'hours in a day.')
 
-# # string concatenation
-# print('there are '+ str(hours) + ' hours in a day.')
+# string concatenation
+#  print('there are '+ str(hours) + ' hours in a day.')
 
-# # formatted string
+# formatted string
 # print(f'there are {hours} hours in a day.')
 
 '''

@@ -134,13 +134,13 @@ This allows you to take user input multiple times without writing multiple lines
 Lets look at code that will run infinitely until the user tells it to "stop"
 '''
 
-#initialize our string
+# initialize our string
 # userin = ''
 
 # while userin != 'stop' :
 #     userin = input("Please enter a word, or 'stop' to end the loop: ")
 #     print(userin)
-
+#we don't need an 'else' unless we use an if or elif statement within the loop
 #assign multiple variables on one line
 # username, password, day_of_week, = 'hello', 'how', 'are you'
 # print(username)
@@ -164,7 +164,7 @@ If they match, print “Login successful” and end the program.
 
 '''
 
-# Set sys id and pass
+#Set sys id and pass
 # sys_id = 'admin'
 # sys_password = 'password'
 

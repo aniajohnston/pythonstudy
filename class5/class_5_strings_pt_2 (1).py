@@ -169,6 +169,8 @@ python
 hon
 
 '''
+word = 'python'
+
 #create variable
 word = 'python'
 #create a variable for half of word
@@ -203,17 +205,17 @@ Test your code on a few inputs to make sure it works!
 '''
 
 # Get input 
-email = input('Hello, please enter your email address: ')
+# email = input('Hello, please enter your email address: ')
 # print(email)
 
 # Sanatize data
-email = email.strip()
+# email = email.strip()
 # print(email)
 
 # Test 1: It has a "." at the third-to-last index
-test_1 = email[-4] == '.'
+# test_1 = email[-4] == '.'
 # print(test_1)
-print('Does it have a "." at the second to last index?',test_1)
+# print('Does it have a "." at the second to last index?',test_1)
 
 
 # Test 2: It has exactly one "@" symbol, at the fifth-to-last index or earlier

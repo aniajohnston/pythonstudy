@@ -1,11 +1,12 @@
-import pandas as pd
+import pandas as pd #alias
 import numpy as np
-import statistics
+
 
 ''' Here's a neat trick '''
 
-# This list contains 100, 1's.
-
+# This list contains 25, 1's.
+lst_1 = [1,2, 3] * 25
+# print(lst_1)
 
 ''' Lists part 2, lists within lists  '''
 
@@ -13,46 +14,63 @@ import statistics
 two_dimensional_list = [["hello", "bye"], [1, 5]]
 
 # access hello
+# print(two_dimensional_list[0][0])
 
 # access bye
+# print(two_dimensional_list[0][1])
 
 # access 1
+# print(two_dimensional_list[1][0])
 
 # access 5
+# print(two_dimensional_list[1][1])
 
 
 # Access all the elements in this list with bracket notation
 my_list = ["hello", 1, ["dog", 3], "cat", [True, ["frog", 5]]]
 
 # Access Hello
+# print(my_list[0])
 
 
 # Access 1
-
+# print(my_list[1])
 
 # Access Dog
+# print(my_list[2][0])
 
 # Access 3
+# print(my_list[2][1])
 
 # Access Cat
+# print(my_list[3])
 
 
 #Access True
+# print(my_list[4][0])
 
 #Access Frog
+# print(my_list[4][1][0])
 
 #Access 5
+# print(my_list[4][1][1])
+
 
 # Nested Loops
+#we broke this one down visually into rows and columns
+#aka a matrix
 mdList = [[1,2,3],
           [4,5,6],
           [7,8,9]]
 
 # regular loop
-
+# for m in mdList:
+#     print(m)
 
 # Access individual values in list with nested loops
-
+# for m in mdList: #access the first dimension
+#     for p in m: #access the second dimension
+#         print(p) #prints one through nine individually
 
 ''' Exercise
 Write a 2D list that is a 3x3 grid of numbers.
@@ -63,13 +81,19 @@ lis = [[1,2,3],[4,5,6],[7,8,9]]
 4 5 6
 7 8 9
 
+We know that this output is second dimension
+
 '''
 
 lis = [[1,2,3],
        [4,5,6],
        [7,8,9]]
 
-
+# for l in lis:
+#     for n in l:
+    #format as directed
+        # print(n, end=' ') #the end parameter is an optional parameter in our print built-in function #adds space between our integers
+    # print() #adds carriage return #think about empty print parameter... default is to create a new line
 
 '''
 Write some code that goes through a 2D list and prints the columns.
@@ -87,19 +111,42 @@ lis = [
     [7,8,9]
 ]
 
+lis_2 = [] #creating a new list
+
 
 # For loop transposes
+# for i in range(len(lis[0])):
+#     # print(i) #tells us the amount of columns we're gonna have
+#     row = [] #create a second list, a temp holding place for integers
+#     for item in lis:
+#         # print(item[i]) #the columns 
+#         row.append(item[i]) #here is where swapping happens
+#     lis_2.append(row) #this will capture the swapped data
+# print(lis_2) #this is the new and swapped list
+    
+#unpacking with star operator - Annie's solution
+# for l in lis_2:
+    # print(*l)
 
-# For loop formats transposing
-
+# For loop formats transposing - traditional method
+# for rows in lis_2:
+#     for columns in rows:
+#         print(columns, end=' ')
+#     print()
 
 # With Pandas
-
+#data frame method and we pass lis into it
+df = pd.DataFrame(lis)
+# print(df) #automatically indexes with a column header and a row header
+transposed_list = pd.DataFrame(df).transpose().values.tolist() #transposing then converting to a list
+# print(transposed_list)
 
 # print in for loop for print's carriage return 
 
 
 # With numpy
+transposed_list = np.transpose(lis)
+# print(transposed_list)
 
 
 '''
@@ -122,15 +169,11 @@ data = [[45,56,89],
 data_columns = []
 
 # Transpose data
-for i in range:
-    for my_columns in data:
+# for i in range:
+#     for my_columns in data:
 
 # Format for output
-print(f'''
-Column 1: Sum = , Average =
-Column 2: Sum = , Average =
-Column 3: Sum = , Average =
-      ''')
+
 
 # List Comprehension
 
