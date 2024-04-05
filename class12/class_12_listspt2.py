@@ -1,6 +1,7 @@
-import pandas as pd #alias
+import pandas as pd 
 import numpy as np
-
+import statistics
+#what follows the as is called an alias
 
 ''' Here's a neat trick '''
 
@@ -169,21 +170,49 @@ data = [[45,56,89],
 data_columns = []
 
 # Transpose data
-# for i in range:
+
+'''METHOD 1: nested for loops, traditional way'''
+# for i in range(len(data[0])):
+#     temp_list = [] #create a second list, a temp holding place for integers
 #     for my_columns in data:
+#         temp_list.append(my_columns[i]) 
+#     data_columns.append(temp_list) #this will capture the swapped data
+# print(data_columns) #this is the new and swapped list
+
+'''METHOD 2: numpy'''   
+# data_columns = np.transpose(data)
+
 
 # Format for output
+#use statistics method
+#and the sum() function already in python
+
+# print(f'''
+# Column 1: Sum = {sum(data_columns[0])}, Average = {statistics.mean(data_columns[0])}
+# Column 1: Sum = {sum(data_columns[1])}, Average = {statistics.mean(data_columns[1]) :.2f}
+# Column 1: Sum = {sum(data_columns[2])}, Average = {statistics.mean(data_columns[2])}
+#       ''')
 
 
+
+
+'''LIST COMPREHENSION'''
 # List Comprehension
 
 # For Loop
 # Add veggies less than 6 letters to new list
-vegetables = ['broccoli', 'kale', 'onion', 'garlic', 'kale']
+vegetables = ['broccoli', 'kale', 'onion', 'garlic']
 
+short_vegetables = []
+for v in vegetables:
+    if len(v) < 6: #if vegetables is less than 6 characters
+      short_vegetables.append(v) #we will append to short vegetables
+# print(short_vegetables)
 
 # List comprehension
-vegetables = ['broccoli', 'kale', 'onion', 'garlic', 'kale']
+vegetables = ['broccoli', 'kale', 'onion', 'garlic']
+new_vegetables = [v for v in vegetables if len(v) < 6]
+# print(new_vegetables)
 
 
 ''' Exercise
@@ -194,35 +223,46 @@ original_list = [34, 57, 81, 92, 2, 13]
 new_list = [34, 92, 2]
 '''
 
+
 ''' List comprehension for conditions'''
 # With a For Loop
 original_list = [34, 57, 81, 92, 2, 13]
 new_list = []
 
+# for o in original_list:
+#    if o % 2 == 0:
+#       new_list.append(o)
+# print(new_list)
 
 
 # With list comprehension
 original_list = [34, 57, 81, 92, 2, 13]
-
-
+new_list = [o for o in original_list if o % 2 == 0]
+print(new_list)
 
 ''' List comprehension with expressions'''
 
 # Lets add 5 to every item in this list
 numbers = [0, 2, 3, 8, 9, 11, 20]
 
+plus_5 = [n + 5 for n in numbers]
+# print(plus_5)
 
 # We can add two lists
 first_list = [1, 2, 3]
 second_list = [4, 5, 6]
 
+third_list = [x for x in first_list] + [x for x in second_list]
+# print(third_list)
 
 
 # Multiply items from two lists
 list1 = [1, 2, 3, 4, 5]
 list2 = [10, 20, 30, 40, 50]
 
-
+#loops through every item in list one and multiply by every item in list 2
+product_list = [list1[i] * list2[i] for i in range(len(list1))] #review range function from last class
+print(product_list)
 
 '''
 Exercise
@@ -242,5 +282,12 @@ over_5_purchases = ['Finn', 'Simone', 'Aaron', 'Dominic']
 customer_discount = []
 
 # For Loop
-
+for c in over_60_years:
+   if c in over_5_purchases:
+      customer_discount.append(c)
+# print(customer_discount)
+      
 # List comprehension
+
+customer_discount = [c for c in over_60_years if c in over_5_purchases]
+# print(customer_discount)

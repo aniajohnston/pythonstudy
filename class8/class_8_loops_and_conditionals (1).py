@@ -6,6 +6,10 @@ How do I write a For Loop?
 How do I write a While Loop?
 
 '''
+
+
+
+
 # For Loop
 # colors = ['green', 'blue', 'orange', 'yellow'] #you can solve the taken usernames problem
 
@@ -72,10 +76,20 @@ userin = '' # initialization of variable
 #     for l in userin: #looping through the input from the user
 #         if l.isalpha(): #testing to see if each character is in the alphabet
 #             print(l)
-#         else: break # break only breaks out of the for loop and goes back to userin = input()
-#     print("This is our next line")
+#         else: 
+#             break # break only breaks out of the for loop
+#     print("This is our next line of the for loop") # still inside for loop goes back to 74 after
+    
+# print("This will print when loop is complete") #only prints when the loop is stopped
+# #for example, if we type in number, it will go back to userin = input() line
 
-#for example, if we type in number, it will go back to userin = input() line
+'''BEST EXAMPLE - 'break' in nested loops'''
+# for i in range(3):   # Outer loop
+#     for j in range(2):   # Inner loop
+#         if j == 1:
+#             break   # Exit the inner loop when j equals 1
+#         print(i, j)
+
 
 '''next excercise'''    
 
@@ -107,6 +121,9 @@ c
 Error: Not a number
 
 '''
+
+
+
 
 '''MY ATTEMPT'''
 # userin = ''
@@ -254,28 +271,28 @@ REQUIREMENTS
 new_total = 0
 new_string = ''
 
-while True:
-    user_input = input("Please enter your data: ")
+# while True:
+#     user_input = input("Please enter your data: ")
 
-    #if empty stop the loop
-    if len(user_input) == 0:
-        print('String is empty, stopping the loop')
-        break
-    #if the string is a number convert to a float and add it to a total
-    elif user_input.isnumeric():
-        user_input = float(user_input)
-        new_total += user_input
-        print(f'Updated total to {new_total}')
-        continue #VERY IMPORTANT, NEEDS TO BE HERE
-    #concatenate to new string
-    elif user_input.isalpha():
-        new_string += user_input
-        print(f'Your updated string is {new_string}')
-        continue
-    #check for special characters
-    elif not user_input.isalnum():
-        print(f'{user_input} is a special character, no action and lets continue')
-        continue
+#     #if empty stop the loop
+#     if len(user_input) == 0:
+#         print('String is empty, stopping the loop')
+#         break
+#     #if the string is a number convert to a float and add it to a total
+#     elif user_input.isnumeric():
+#         user_input = float(user_input)
+#         new_total += user_input
+#         print(f'Updated total to {new_total}')
+#         continue #VERY IMPORTANT, NEEDS TO BE HERE
+#     #concatenate to new string
+#     elif user_input.isalpha():
+#         new_string += user_input
+#         print(f'Your updated string is {new_string}')
+#         continue
+#     #check for special characters
+#     elif not user_input.isalnum():
+#         print(f'{user_input} is a special character, no action and lets continue')
+#         continue
 
 '''Error messages'''
 error_messages = ['Username taken', 'Password taken', 'Error message 3'] #you can index this for error messages

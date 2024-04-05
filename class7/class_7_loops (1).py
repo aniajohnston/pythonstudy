@@ -165,10 +165,12 @@ If they match, print “Login successful” and end the program.
 '''
 
 #Set sys id and pass
-# sys_id = 'admin'
-# sys_password = 'password'
+sys_id = 'admin'
+sys_password = 'password'
 
 # # Prompt User - for people that get it right the first time, they will not enter the loop
+# you would usually use while true
+# you would initialize outside of the loop
 # user_id = input('Please enter your username: ')
 # user_password = input('Please enter your password:')
 
@@ -178,7 +180,7 @@ If they match, print “Login successful” and end the program.
 #     print('Incorrect username and password')
 #     user_id = input('Please enter your username: ')
 #     user_password = input('Please enter your password:')
-
+#     print('I am here')
 # print('Login Sucessful!') #this is outside of the loop because it is left aligned
 
 

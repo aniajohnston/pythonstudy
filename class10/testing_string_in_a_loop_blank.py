@@ -20,11 +20,13 @@ Sd@sdjsdf0 - should pass all tests
 
 while True:
     user_input = input("Please enter your string ")
-    print(user_input)
-    break
 
     # Not enough characters
-    
+    if len(user_input) >= 10:
+        print(f'Test Passed: {user_input} is greater than 10 characters')
+    else:
+        print(f'Test Failed: {user_input} is less than 10 characters')
+        continue
     # Contain at least 1 number
   
     # Contains at least 1 capital letter
