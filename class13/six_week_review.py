@@ -128,9 +128,16 @@ replace = test_name.replace('j','B')
 
 # split this string and place each word in a list
 string = 'I would like to split up this string'
+new_string = string.split()
+# print(new_string)
+# print(type(new_string))
+
 
 # Check if this string starts with a letter w
 str = 'zootopia'
+result = str.startswith('w')
+# print(result)
+
 
 
 ''' Conditionals - if/else statements '''
@@ -140,23 +147,79 @@ str = 'zootopia'
 num_1 = 10
 num_2 = 9
 
+# if num_1 > num_2:
+#     print(f'{num_1} is greater than {num_2}.')
+# else:
+#     print(f'{num_1} is not greater than {num_2}.')
+
+
+
+
 
 ''' Loops - For/While'''
 
 # Write a while loop that will count from 0 to 50
 
 
-# Write a while loop that will count down from 65 to 25
+#option one
+# start = 0
+# stop = 51
+# while start < stop:
+#     print(start)
+#     start += 1
 
+#option two
+# start = 0 #think of start as our counter variable
+# end = 50
+
+# while start <= end:
+#     print(start)
+#     start += 1
+
+
+# Write a while loop that will count down from 65 to 25
+# start = 65
+# stop = 25
+
+# while start >= stop:
+#     print(start)
+#     start -= 1
 
 
 # Write a while loop that will ask start at 100 and count down to 50, however, put some logic into the loop so the loop stops at 75
  
+start = 100
+stop = 50
+
+#option 1
+
+# while start >= stop:
+#     print(start)
+#     start -= 1
+#     if start == 74:
+#         break
+
+#option 2 (more fancy)
+
+# while start >= stop:
+#     print(start)
+#     start -= 1
+#     if start == 75:
+#         print(f'Your ending value is {start}.')
+#         break
+
+
+
 
 # Write a for loop that will loop through the string below and copy/move these letters to the new empty string'''
 
 str_1 = 'Have a happy birthday'
 str_2 = ''
+
+# for s in str_1:
+#     if str_1 not in str_2:
+#         str_2 += s #adds every character from string 1 to string 2
+# print(str_2)
 
 
     
@@ -165,6 +228,16 @@ str_2 = ''
     
 num_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
+# for n in num_list:
+#     if n % 2 == 0:
+#         print(f'{n} is even.')
+#     else:
+#         print(f'{n} is odd.')
+
+
+
+
+
 
 
 # write a for loop to loop through this string and tell the user if the number is vowel or a consonant
@@ -172,11 +245,28 @@ num_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 vowels = 'aeiou'
 my_string = 'abracadabra'
 
+# for m in my_string:
+#     if m in vowels:
+#         print(f'{m} is a vowel.')
+#     else:
+#         print(f'{m} is not a vowel.')
 
 
 
 # In a while loop, ask the user for their favorite animal. If the word is equal to giraffe, we will tell the user congratulations and end the loop. Otherwise we will keep prompting the user.
 
+user_input = ''
+
+keyword = 'giraffe'
+
+# while True:
+#     user_input = input('Please guess the animal: ')
+#     user_input.strip()
+#     if user_input == keyword:
+#         print('Congrats, you guessed it!')
+#         break
+#     else:
+#         print(f'Sorry, try again. {user_input} is not the correct guess.')
 
 
 
@@ -186,12 +276,41 @@ my_string = 'abracadabra'
 
 # HINT The isupper() method returns True if all the characters are in upper case, otherwise False.
 
+user_input = ''
+
+# while True:
+#     user_input = input('Please enter a lowercase word: ')
+#     if user_input != user_input.isupper():
+#         print(f'{user_input} is a lowercase word.')
+#         break
+#     else:
+#         print(f'Sorry, {user_input} is not a lowercase word.')
+#         continue
+
+
+
 
         
 # Create a while loop, We will ask the user for a string, the first character of the string must be a number, the last character must be a capital letter to pass testing. Otherwise the user must keep trying.
 
-# test_word = '1helloH'
+test_word = '1helloH'
+user_input = ''
 
+# while True:
+#     user_input = input('Please enter a string where the first character is a number and the last is a capital letter: ')
+#     if user_input[0].isnumeric() and user_input[-1].isupper():
+#         print(f'You have passed the tests!')
+#         break
+#     else:
+#         continue
+    
+
+
+
+
+
+        
+    
 
 
 ''' Lists '''
@@ -200,18 +319,30 @@ my_string = 'abracadabra'
 full_list = ['Move', 'me', 'to', 'an', 'empty', 'list', 'with', 'append']
 empty_list = []
 
+# for n in full_list:
+#     if n not in empty_list:
+#         empty_list.append(n)
+# print(empty_list)
+        
+
+
+
 
 # Lets practice some more indexing
 
 my_super_list = [['superman', 'wonderwoman','batman'],['spiderman','captain america','ironman'],['aquaman']]
 
 # Create a variable and assign it to wonderwoman via indexing
-
+# wonderwoman = my_super_list[0][1]
+# print(wonderwoman)
 
 # Create a variable and assign it to spiderman via indexing
-
+# spiderman = my_super_list[1][0]
+# print(spiderman)
 
 # Create a variable and assign it to aquaman via indexing
+# aquaman = my_super_list[2][0]
+# print(aquaman)
 
 
 # Using a for loop, create a new list that contains any students without the letter a
