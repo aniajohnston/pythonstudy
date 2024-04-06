@@ -90,10 +90,10 @@ lis = [[1,2,3],
        [4,5,6],
        [7,8,9]]
 
-# for l in lis:
-#     for n in l:
-    #format as directed
-        # print(n, end=' ') #the end parameter is an optional parameter in our print built-in function #adds space between our integers
+# for rows in lis:
+#     for columns in l:
+    #Format as Directed
+        # print(columns, end=' ') #the end parameter is an optional parameter in our print built-in function #adds space between our integers
     # print() #adds carriage return #think about empty print parameter... default is to create a new line
 
 '''
@@ -114,16 +114,19 @@ lis = [
 
 lis_2 = [] #creating a new list
 
+for i in range(len(lis[0])): #tells us there are three columns
+    row = [] #temporary holding spot, lists within lis_2
+    for item in lis:
+        #print(item[i]) #prints each column
+        row.append(item[i])
+    #print(row) #prints each temporary iteration
+    lis_2.append(row) #captures the swapped data
+print(lis_2)
 
-# For loop transposes
-# for i in range(len(lis[0])):
-#     # print(i) #tells us the amount of columns we're gonna have
-#     row = [] #create a second list, a temp holding place for integers
-#     for item in lis:
-#         # print(item[i]) #the columns 
-#         row.append(item[i]) #here is where swapping happens
-#     lis_2.append(row) #this will capture the swapped data
-# print(lis_2) #this is the new and swapped list
+'''If we didn't use: row = [] our output would be:
+[1, 4, 7, 2, 5, 8, 3, 6, 9]
+'''
+
     
 #unpacking with star operator - Annie's solution
 # for l in lis_2:
@@ -238,7 +241,7 @@ new_list = []
 # With list comprehension
 original_list = [34, 57, 81, 92, 2, 13]
 new_list = [o for o in original_list if o % 2 == 0]
-print(new_list)
+# print(new_list)
 
 ''' List comprehension with expressions'''
 
@@ -262,7 +265,7 @@ list2 = [10, 20, 30, 40, 50]
 
 #loops through every item in list one and multiply by every item in list 2
 product_list = [list1[i] * list2[i] for i in range(len(list1))] #review range function from last class
-print(product_list)
+# print(product_list)
 
 '''
 Exercise
