@@ -1,20 +1,50 @@
 '''Create a new list that contains any students without the letter a, do one version with a for loop, do another one with list comprehension'''
 
 # For Loop
-# students = ['Anna', 'Dana', 'Sarah', 'Farley', 'Oleg', 'Gionni', 'Brenetta']
+students = ['Anna', 'Dana', 'Sarah', 'Farley', 'Oleg', 'Gionni', 'Brenetta']
+
+# Create an empty list
+
+new_list = []
+
+# For loop, if conditional
+
+for s in students:
+        if 'a' not in s:
+            new_list.append(s)
+# print(new_list)
+
+
 
 # List Comprehension - new_list = [x for x in original_list if condition]
-# students = ['Anna', 'Dana', 'Sarah', 'Farley', 'Oleg', 'Gionni', 'Brenetta']
+students = ['Anna', 'Dana', 'Sarah', 'Farley', 'Oleg', 'Gionni', 'Brenetta']
 
+new_list = [s for s in students if 'a' not in s]
+# print(new_list)
 
 ''' Create a list with 1 added to each item in the list, do one version with a for loop, do one with list comprehension'''
 
 original_list = [1, 2, 3, 4, 5, 6]
-new_list = []
 
+#1 create an empty list
+new_list = []
+#2 create an empty list
+# new_list = list()
+
+#MY VERSION
+for o in original_list:
+      o += 1
+      new_list.append(o)
+# print(new_list)
+
+#Professor's Version
+# for o in original_list:
+#       new_list.append(o + 1)
+# print(new_list)
 
 # List Comprehension - new_list = [expression for x in original_list]
-
+new_list = [num + 1 for num in original_list]
+# print(new_list)
 
 
 ''' Ranges '''
@@ -37,8 +67,21 @@ purpose = ['word processing', 'spreadsheet', 'presentation', 'database']
 
 
 # With ranges
+#My method
+# print(f'''
+# {software[0]} is {purpose[0]} software.
+# {software[1]} is {purpose[1]} software.
+# {software[2]} is {purpose[2]} software.
+# {software[3]} is {purpose[3]} software.
+# ''')
+
+#Daniel's Method
+# for s in range(len(software)): #only use if both the same length
+    #   print(f'{software[s]} is {purpose[s]}.')
 
 # With zip
+# for s , p in zip(software, purpose):
+    #   print(f'{s} is {p} software')
 
 
 
@@ -47,8 +90,14 @@ Write a Python program that accepts a sequence of comma-separated numbers from t
 
 # Try the split string method
 '''
+#METHOD 1
+# user_input = input('Please enter your data')
+# result = user_input.split(',')
+# print(result)
 
-
+#METHOD 2
+# user_input = input('Please ebter your data').split(',')
+# print(user_input)
 
 
 '''
@@ -56,12 +105,23 @@ Write a Python program to display the first and last colors from the following l
 color_list = ["Red","Green","White" ,"Black"]
 '''
 
+color_list = ["Red","Green","White" ,"Black"]
+# print(f'The first color is {color_list[0]}. The last color is {color_list[-1]}.')
+
+
 '''
 Write a Python program that accepts an integer (n) and computes the value of n+nn+nnn.
 Sample value of n is 5
 Expected Result : 615
 
 '''
+# user_input = (input('Please enter your data: '))
+
+# first= int(user_input)
+# second = int(user_input + user_input)
+# third = int(user_input + user_input + user_input)
+
+# print(first + second + third)
 
 
 '''
@@ -71,6 +131,14 @@ my_list = [1, 2, 3, 4, 5]
 new_string = '12345'
 '''
 my_list = [1, 2, 3, 4, 5]
+new_string = ''
+
+# for s in my_list:
+#       s = str(s) #changes integer to string
+#       if s not in new_string:
+#             new_string += s
+# print(new_string)
+
 
 
 '''
