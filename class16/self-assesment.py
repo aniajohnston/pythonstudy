@@ -13,3 +13,14 @@ my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 10. Remove the duplicates from a list with values [4, 4, 4, 3, 2, 1, 4, 9]
 '''
 
+my_input = input("How many times does the letter 'b' show up: ")
+
+counter = 0
+char = 'b'
+
+# for b in my_input:
+#     if b in char:
+#         counter += 1
+# print(counter)
+
+
