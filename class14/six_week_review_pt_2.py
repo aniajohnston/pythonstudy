@@ -1,3 +1,5 @@
+import random
+
 '''Create a new list that contains any students without the letter a, do one version with a for loop, do another one with list comprehension'''
 
 # For Loop
@@ -155,6 +157,17 @@ Example 5
 
 '''
 
+# user_input = int(input('Please enter your data: '))
+
+# sum = 0
+
+# for r in range(user_input + 1): #all the numbers you have to add up
+#       sum += r
+
+# print(sum)
+
+
+
 
 
 '''  Write a Python program to calculate sum of digits of a number. '''
@@ -168,8 +181,18 @@ Example 5
 The isinstance() function returns True if the specified object is of the specified type, otherwise False.
 '''
 
-# obj_1 = 432
-# obj_2 = 'hello'
+obj_1 = 432
+obj_2 = 'name'
+
+# print(isinstance(obj_1, int)) #True
+# print(isinstance(obj_2, int)) #True
+
+
+# if isinstance(obj_1, int) and isinstance(obj_2, int):
+#       print(obj_1 + obj_2)
+# else:
+#       print('Your data cannot be added.')
+
 
 
 
@@ -218,8 +241,17 @@ Print the following pattern
 3 3 3 
 4 4 4 4 
 5 5 5 5 5
+
+Hint: You can multiply strings and the output will be '111'
 '''
 
+test_string = '12345'
+start = 1
+
+# for n in test_string:
+#       print(n* start)
+#       start += 1 #increment start by 1
+      
 
 
 
@@ -231,9 +263,29 @@ Positive, Negative, or Zero: Write a Python program that takes a number as input
 
 '''
 Largest of Three Numbers: Write a Python program that takes three numbers as input and prints the largest among them.
+
+Add these to a list
 '''
 
+'''METHOD 1'''
+# u = int(input('Please enter your data: '))
+# u1 = int(input('Please enter your data: '))
+# u2 = int(input('Please enter your data: '))
 
+# max_list = []
+
+# max_list.append(u)
+# max_list.append(u1)
+# max_list.append(u2)
+
+# # print(max_list) for testing 
+
+# result = max(max_list)
+# print(result)
+
+'''METHOD 2'''
+# max_list = [int(input('Please enter your data')), int(input('Please enter your data')), int(input('Please enter your data'))]
+# print(f'The biggest number in the list is {max(max_list)}.')
 
 
 '''Count Digits in a Number: Write a Python program using a while loop to count the number of digits in a given integer N taken from a user.'''
@@ -298,7 +350,11 @@ my_super_list = [
     ['spiderman','captain america','ironman'],
     ['aquaman']
                  ]
+new_super_list = []
 
+for m in my_super_list:
+            new_super_list.extend(m)
+print(new_super_list)
 
 
 
@@ -307,5 +363,19 @@ my_super_list = [
  Number Guessing Game: Write a Python program that generates a random number between 1 and 10 and lets the user guess the number. Use a `while` loop, `break` when the correct number is guessed, and `continue` to keep prompting the user until they guess correctly.
 '''
 
+# number_to_guess = random.randrange(0,10)
 
+# print(number_to_guess)
 
+user_input = ''
+
+# while True:
+#         user_input = int(input('Please enter your number: '))
+#         number_to_guess = random.randrange(1,11)
+#         if user_input == number_to_guess:
+#                 print('You guessed the number!')
+#                 break
+#         else:
+#                 print('Try again!')
+#                 continue
+        
