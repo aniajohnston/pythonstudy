@@ -1,4 +1,6 @@
 from statistics import mode
+import pandas as pd
+import numpy as np
 
 ''' Fun facts about dictionaries 
 
@@ -170,7 +172,9 @@ records = [{'name': 'Bob', 'title': 'manager', 'salary': 50000},\
            {'name': 'Alice', 'title': 'developer', 'salary': 60000},\
            {'name': 'David', 'title': 'developer', 'salary': 65000},
            {'name': 'Joe', 'title': 'consultant', 'salary': 25000},\
-           {'name': 'Susan', 'title': 'consultant', 'salary': 40000}]
+           {'name': 'Susan', 'title': 'consultant', 'salary': 40000},
+           {'name': 'Isaiah', 'title': 'sales', 'salary': 120000},\
+           {'name': 'Brenetta', 'title': 'sales', 'salary': 150000}]
 
 # Our output dictionaries
 title_salary_dict = {} #capture our titles and salary totals
@@ -189,11 +193,21 @@ for r in records:
         # otherwise, we will update the salary, and update the titles 
         title_salary_dict[title] += salary
         title_count_dict[title] += 1
-        
+
+#let's take a look at our output
+# print('All titles and sum of salaries', title_salary_dict)
+# print('Titles, and the count of employees', title_count_dict)
 
 
+result = {s:float(title_salary_dict[s])/title_count_dict[s] for s in title_salary_dict}
 
+# print(result)
 
+# Pandas solution
+df = pd.DataFrame.from_records(records)
+result = df.groupby('title')['salary'].mean()
+
+# print(result)
 
 
 
