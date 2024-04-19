@@ -12,6 +12,8 @@ import numpy as np
 
 # How do we create a dictionary?
 
+user_data = {}
+print(type(user_data)) # curly brackets with nothing inside automatically imply dictionary
 
 
 
