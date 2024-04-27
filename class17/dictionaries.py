@@ -261,11 +261,14 @@ result = mode(use_stats_module)
 # Looping through and adding 
 incomes = {"apple": 5600.00, "orange": 3500.00, "banana": 5000.00}
 
-sum = 0.00
+total = 0.00
 
 # for v in incomes.values():
-#     sum += v
-# print(sum)
+#     total += v
+# print(total)
+
+#OLEG'S SOLUTION
+# print(sum(incomes.values()))
     
 
 
