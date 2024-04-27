@@ -4,6 +4,18 @@ import statistics
 
 # With documentation and type hinting (optional)
 
+# def my_function(country: str = 'Norway') -> None : #country: str is called 'type hinting' The arrow means we are not returning anything
+#     '''I am explaining what my country does
+
+#     -country parameter with default value
+#     '''
+#     print("I am from", country)
+
+# my_function("Sweden") #overrides
+# my_function("Brazil") #overrides
+# my_function() #uses default
+
+
 
 '''
 Exercise
@@ -17,18 +29,44 @@ Test your function by calling it with different arguments.
 '''No documentation or type hinting'''
 
 
-test_list1 = [1,2,2,2,3,4,5,6,7,8]
-test_list2 = [3,6,7,9,10,11,2]
+# def center(my_list, use_median=False): #use median defaults to False
+#     if use_median == False:
+#         return statistics.mean(my_list)
+#     else:
+#         return statistics.median(my_list)
 
+
+# test_list1 = [1,2,2,2,3,4,5,6,7,8]
+# test_list2 = [3,6,7,9,10,11,2]
+
+# my_median = center(test_list1, True)
+# my_mean = center(test_list1)
+# my_mean_two = center(test_list1, False)
+# print(my_median)
+# print(my_mean)
+# print(my_mean_two)
 
 
 
 # '''Documentation, type hinting, shorthand if-then-else'''
 
-test_list1 = [1,2,2,2,3,4,5,6,7,8]
-test_list2 = [3,6,7,9,10,11,2]
+# def center(my_list:list, use_median: bool = False) -> float: #with type hinting
+#     '''Return either mean or median of a list of numbers
+    
+#     -my_list: the list to extract mean or median
+#     -use_median: bool to select mean or median
+#     '''
+#     return statistics.mean(my_list) if use_median == False else statistics.median(my_list)
 
+# test_list1 = [1,2,2,2,3,4,5,6,7,8]
+# test_list2 = [3,6,7,9,10,11,2]
 
+# my_median = center(test_list1, True)
+# my_mean = center(test_list1)
+# my_mean_two = center(test_list1, False)
+# print(my_median)
+# print(my_mean)
+# print(my_mean_two)
 
 
 
@@ -63,6 +101,13 @@ Mode: 5
 '''
 
 my_list = [1,2,4,5,5]
+
+# def get_stats(list):
+#     return f'Mean: {statistics.mean(list)}\nMedian: {statistics.median(list)}\nMode: {statistics.mode(list)}'
+
+# print(get_stats(my_list))
+
+
 
 
 '''Global variables'''
