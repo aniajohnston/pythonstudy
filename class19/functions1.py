@@ -1,5 +1,5 @@
 import math
-import name_module
+import class19.assignment.name_module as name_module
 
 # print(name_module.full_name(firstname, lastname))
 # print(name_module.reverse_name(firstname, lastname))
@@ -86,70 +86,115 @@ Write a function that will loop through a string and print whether a character i
 '''3. Call name_module and use the method value_or_not with the parameter or your choosing'''
 # name_module.vowel_or_not('America')
 
-
-
-
 '''
 Example
 
 Write a function that returns the surface area of a box (rectangular prism).
-Surface Area = width*2 + length*2 + height*2
+Surface Area = 2 * ((width*length + (length*height) + (height*width))
 
 '''
+
+'''OPTION 1'''
+# #write the function
+# def surface_area(width, length, height):
+#     return 2 * ((width*length) + (height*length) + (height* width))
+
+# #FIRST METHOD print entire function call
+# print(surface_area(5, 3, 6))
+# #SECOND METHOD send the function call to a variable
+# total = surface_area(5, 3, 6)
+# print(total)
+
+"""OPTION 2"""
+# width = 5
+# length = 3
+# height = 4
+
+# def surface_area(w, l, h):
+#     return 2 * ((w*l)+(l*h)+(h*w))
+
+# print(surface_area(width, length, height))
+
 
 
 '''
 Exercise
 Write a function that returns the surface area of a sphere.
 Surface Area = 4 * pi * radius^2
-
 '''
+
+'''MY SOLUTION'''
+# radius = 2
+
+# def surface_area_sphere(r):
+#     return float(4) * 3.14159 * float(r** 2)
+
+# print(surface_area_sphere(radius))
+
+"""DANIEL'S SOLUTION"""
+
+# radius = 6.0 #write your radius as a float
+
+# def surface_of_sphere(r):
+#     return 4 * math.pi * radius **2
+
+# print(surface_of_sphere(radius))
 
 
 
 ''' Lets follow these functions through line by line and analyse the return statements'''
-
 # def get_vowels(word):
-#     out = ''
+#     out = '' #empty string
 #     vowels = 'aeiou'
 #     for w in word:
 #         if w in vowels:
-#             out += w
-    
+#             out += w #appending vowel to empty string
 #     return out
 
 # my_word = 'bananas'
 
+# '''function call by itself won't print'''
 # get_vowels(my_word)
+# '''function call with the print statement will print out the return'''
 # print(get_vowels(my_word))
 
+'''PRINT VOWELS'''
 # Return is none
-# def get_vowels(word):
+# def print_vowels(word):
 #     out = ''
 #     vowels = 'aeiou'
 #     for w in word:
 #         if w in vowels:
 #             out += w
-    
 #     print(out)
 
 # my_word = 'bananas'
 
-# get_vowels(my_word)
-# print(get_vowels(my_word)) # Return None
+# print_vowels(my_word) #prints the results of line 101
+# print(print_vowels(my_word)) # this is the 'return' format and this will result in the word "None" to be printed in the terminal since we are not using 'return'
 
 
 
 '''
 Exercise
-Write a function that takes a list and a value, and removes the value until it no longer exists in the list.
-Return how many times the value was removed.
+1. Write a function that takes a list and a value, and removes the value until it no longer exists in the list.
+2. Return how many times the value was removed.
 '''
 
-sample_list = [4,5,3,2,4,3,3,3,3,2,2,1,1,1,1,0,5]
-value = 5
+# sample_list = [4,5,3,2,4,3,3,3,3,2,2,1,1,1,1,0,5]
+# value = 5
+
+# def val_count(my_list, my_value):
+#     counter = 0
+#     while my_value in my_list:
+#         my_list.remove(my_value)
+#         counter += 1
+#     return counter
 
 
+
+# result = val_count(sample_list, value)
+# print(f'{value} appears {result} times.')
 
 '''
 Suppose you work for a bank, and you have a list of transactions with the following information for each one: customer ID, transaction amount, and transaction type (deposit or withdrawal).
@@ -170,7 +215,25 @@ transactions = [{'id': 'a', 'amount': 500, 'type': 'deposit'},\
                 {'id': 'b', 'amount': 45, 'type': 'withdrawal'},\
                 {'id': 'e', 'amount': 150, 'type': 'deposit'}]
 
+'''Write our function'''
+# def transaction_logs(transaction_data):
+#     output = {}
+#     for t in transaction_data:
+#         #if ID doesn't yet exist, add it to our output dictionary
+#         if t['id'] not in output.keys():
+#             if t['type'] == 'deposit': #checking for deposits
+#                output[t['id']] = t['amount'] #add deposits amount to ID key
+#             else:
+#                 #otherwise it exists, let's check to see if it's a withdrawl or deposit
+#                 if t['type'] == 'withdrawal':#checking deposit
+#                     output[t['id']] -= t['amount']
+#                 else:
+#                     output[t['id']] += t['amount']
+#     return output
 
+
+'''Output our function'''
+# print(transaction_logs(transactions)) #our function call, with our list of dictionaries
 
 
 ''' Create a python file called name_module.py. Inside this python file, you will create 3 functions. One called full_name, another called reverse_name, and a third called get_initials. Each function will take 2 strings. One string will be the first name, the second string will be the last name. full_name will concatenate and return the full name. For example if the first string is "Joseph" and the second string is "Simpson" This function will return the string, "Joseph Simpson". Reverse name will flip the name around. The name Diana Prince, would come back as Prince Diana. The third function will take the first and last name and return the initials. The name Tony Stark will return T.S. Now create a second python file, called name.py. Import the module you just created and call the function with the necessary arguments so it prints a full names, reverse names, and initials as needed in the terminal'''
