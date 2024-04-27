@@ -4,10 +4,8 @@ last_name = 'Johnston'
 def full_name(first,last):
     return first + ' ' + last
 
-print(full_name(first_name,last_name))
-
 def reverse_name(first,last):
-    pass
+    return last + ' ' + first
 
 def get_initials(first,last):
-    pass
+    return f'{first[0]}.{last[0]}.'
