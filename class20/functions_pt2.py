@@ -105,59 +105,111 @@ my_list = [1,2,4,5,5]
 # def get_stats(list):
 #     return f'Mean: {statistics.mean(list)}\nMedian: {statistics.median(list)}\nMode: {statistics.mode(list)}'
 
+# gets_stats() #this is a function call, or invocation AKA invoke the function
 # print(get_stats(my_list))
 
+'''Second attempt'''
+# def get_stats(my_list):
+#     my_mean = statistics.mean(my_list)
+#     my_median = statistics.median(my_list)
+#     my_mode = statistics.mode(my_list)
+#     return f'Mean: {my_mean}\nMedian: {my_median}\nMode: {my_mode}' #you can return a formatted string
+
+
+# print(get_stats(my_list)) #put function call inside a print statement
+
+'''Second Attempt with TYPE HINTING'''
+# def get_stats(my_list:list) -> str: #specify what this list returns
+#     my_mean = statistics.mean(my_list)
+#     my_median = statistics.median(my_list)
+#     my_mode = statistics.mode(my_list)
+#     return f'Mean: {my_mean}\nMedian: {my_median}\nMode: {my_mode}' #you can return a formatted string
+
+
+# print(get_stats(my_list)) #put function call inside a print statement
 
 
 
 '''Global variables'''
 
+''' it did not change here'''
 # x = 'challenging'
 # def change_x():
 #     x = 'fun'
 
-# change_x()
+# change_x() #function call
 # print("Programming is", x)
 
-
+'''here it changes'''
 # x = 'challenging'
 # def change_x():
-#     global x
+#     global x #this is due to 'global x' declaration
 #     x = 'fun'
     
 # change_x()
 # print("Programming is", x)
 
+
+
 '''
 A lambda is a small anonymous function. It can take any number of arguments, but it can only have one expression, which is returned.
 Syntax: lambda arguments : expression
+
+a lambda is like a function without a name
 '''
 
 # Function to add two numbers
+# def add_two(x,y):
+#     return x+y
 
+# print(add_two(2,4))
 
 
 # Written as a Lambda
 
+add_two = lambda x,y: x+y
 
+'''two ways to call lambda functions'''
+# print(add_two(2,4))
 
+# print((add_two)(2,4))
 
 # Write the following functions as Lambdas
 
-def greeting(fname):
-    print(f'Hello, {fname}')
+# def greeting(fname):
+#     print(f'Hello, {fname}')
 
+# greeting = lambda fname: f'Hello, {fname}'
 
-def double_me(num):
-    return num + num
+# print(greeting('Ania'))
+# print((greeting)('Ania'))
 
+# def double_me(num):
+#     return num + num
+
+# double_me = lambda num:num+num
+
+# print(double_me(3))
+# print((double_me)(3))
+
+# fname = 'Daniel'
+# lname = 'Smith'
+# lambda fname, lname: f'Hello, {fname} {lname}'
+# '''without using the greeting variable'''
+# print((lambda fname, lname: f'Hello, {fname}{lname}')(fname,lname))
 
 '''
 Exercise
 Write a lambda that computes the n-th power of a number, given two arguments, num and n.
 Now, write a function that is equivalent to the lambda.
 '''
+'''written as a definition'''
+# def power(num,n):
+#     return num ** n
 
+'''written as a lambda'''
+# power = lambda num, n: num ** n 
+# print(power(2,2))
 
 
 
@@ -169,16 +221,33 @@ filter - The filter() method filters the given sequence with the help of a funct
 
 map - returns a map object(which is an iterator) of the results after applying the given function to each item of a given iterable (list, tuple etc.)
 
+FILTER is a higher order function because it uses a function as its parameter
+
 '''
 # Let's use the filter function to find the even numbers in a list
 
+# def even_function(n):
+#     return n % 2 == 0
 
+# n=6
+# print(even_function(n))
 
+'''Apply filter to apply even numbers'''
 my_list = [0,1,2,3,4,5,6,7,8,9,10]
+
+# even_number_filter = filter(lambda n: n % 2 == 0, my_list) #takes the function (lambda) and the iterable (list)
+# print(list(even_number_filter)) #have to convert it from filter object to a list object
+
+
+
 
 # Triple Me! Triple the numbers in this lsit
 
 triple_me = [0,1,2,3,4,5,6]
+
+# result = map(lambda n: n * 3, triple_me)
+# print(list(result)) #convert map object to list and print
+
 
 # Lambda with sort
 
@@ -189,6 +258,15 @@ students = [{"name":"Kim","grade":98},
             {"name":"Torrie","grade":65},
             {"name":"Simon","grade":78}]
 
+'''sorted function'''
+'''-syntax-
+ sorted(iterable, key = key, reverse = reversed) '''
+# students_by_name = sorted(students, key = lambda s: s['name'])
+# print(students_by_name)
+
+'''change lambda function key to 'grade' '''
+# students_by_grade = sorted(students, key = lambda s:s['grade'])
+# print(students_by_grade)
 
 
 '''
@@ -200,6 +278,14 @@ parameters - assets, liabilities
 Must contain type hinting for the parameters as well as what the function will be returning
 Call the function in a print statement with needed arguments
 '''
+
+# def net_worth(assets: float,liabilities:float) -> float:
+#     '''return networth
+#     -user's assets
+#     -user's liabilities'''
+#     return assets - liabilities 
+
+# print(net_worth(20000,10000))
 
 
 
