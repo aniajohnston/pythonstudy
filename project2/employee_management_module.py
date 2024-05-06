@@ -1,3 +1,6 @@
+from datetime import datetime
+import datetime
+
 class Employee:
     '''Employee Management System
     5 Attributes: name, job title, department, salary, hire year'''
@@ -16,6 +19,11 @@ class Employee:
         return f"{self.name} is a {self.job_title} and works in the {self.department} department with a salary of ${self.salary} and was hired in {self.hire_year}."
 
     #Years Worked - Total years this employee has worked here, based on the hire year
+    def years_worked(self):
+        today = datetime.datetime.now()
+        year = today.year    
+        years_worked = year - self.hire_year
+        return f'{self.name} has worked for {years_worked} years.'   
 
     #Total Expenses - Total salary expenses for this employee, salary times years worked
 
@@ -36,3 +44,4 @@ class Employee:
 
 employee1 = Employee("Rob","Programmer","Tech",50000,2000)
 print(employee1)
+print(employee1.years_worked())
