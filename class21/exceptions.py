@@ -4,67 +4,113 @@ import math
 
 ''' Compile time errors / static errors'''
 # SyntaxError: unterminated string literal
-
+# print('Wed)
+# name = 'John
 
 # SyntaxError: '(' was never closed
-
+# print('Happy Monday'
+      
 # SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+# if x = 10:
 
 # SyntaxError: expected ':'
+# if x == 10
+
 
 
 ''' Exceptions / Runtime errors'''
 
+
 ''' ValueError '''
 # ValueError: could not convert string to float: 'testing'
+# print(float('testing'))
 
 # ValueError: math domain error
+# print(math.sqrt(-5))
 
 # ValueError: not enough values to unpack (expected 3, got 2)
+# firstname, lastname, middle = 'fritz','smith'
 
 ''' AttributeError '''
+'''Regarding append method, only a list method'''
 
 # AttributeError: 'int' object has no attribute 'append'
-num = 10
+# num = 10
+# num.append(5)
 
 # AttributeError: 'str' object has no attribute 'append'
-str1 = 'hello'
+# str1 = 'hello'
+# str1.append('buddy')
+
 
 ''' NameError '''
 # NameError: name 'x' is not defined
+# print(x)
 
 #name 'c' is not defined
+# for i in range(c):
+#     print(i)
 
 ''' TypeError '''
 #TypeError: can only concatenate str (not "int") to str
-
+# color = 'blue'
+# age = 25
+# result = color + age
 
 # TypeError: 'str' object is not callable
+# car = 'chevy'
+# car()
+
 
 # TypeError: list indices must be integers or slices, not str
-
+# fav_animals = ['dog','cat','bird']
+# index_value = '1'
+# print(fav_animals[index_value])
 
 # TypeError: 'int' object is not iterable
+# for i in 155:
+#     print(i)
 
 
 # TypeError: unsupported operand type(s) for +: 'int' and 'str'
+# def add_two(x, y):
+#     return x + y
 
+# add_two(5, 'hello')
 
 # Keyboard interruption exception
 
-# KeyboardInterrupt
 
+# KeyboardInterrupt
+# i = 2
+# while i > 0:
+#     i += 1
+#     print(i)
 
 
 # Lets prevent a user from dividing by zero
+# num = int(input('Please enter your numerator: '))
+# den = int(input('Please enter your denominator: '))
 
+# try:
+#     quotient = num/ den
+#     print(quotient)
+# except ZeroDivisionError:
+#     print('Sorry, you cannot divide by zero.')
 
 
 
 # Lets implement a try, except, to prevent a user entering a regular word
 
+# userin = input('Please enter a number')
+# num_list = []
 
-
+# try:
+#     num_list.append(float(userin))
+# except ValueError:
+#     print('Number value only please')
+# else:
+#     print(num_list)
 
 
 
@@ -76,17 +122,53 @@ Sometimes the age might not be in the correct format. Handle this using try-exce
 If the age is greater than or equal to 65, the customer is eligible for the discount. Otherwise, they're not eligible. Print whether the customer is eligible or not.
 
 '''
+try:
+    customer_age = int(input("Please enter your age: "))
+except ValueError:
+    print('Age must be an integer value')
+if customer_age >= 65:
+    print('Eligible for discount.')
+else:
+    print('Customer not eligible for discount.')
+
+'''all in one line of code'''
+try:
+    customer_age = int(input("Please enter your age: "))
+    print('Eligible for discount') if customer_age >= 65 else print('Customer is not eligible for discount')
+except ValueError:
+    print('Age must be an integer value')
+# if customer_age >= 65:
+#     print('Eligible for discount.')
+# else:
+#     print('Customer not eligible for discount.')
 
 
-
-
-# With Except
-
+''' With Except'''
+# try:
+#     customer_age = int(input("Please enter your age: "))
+#     print('Eligible for discount') if customer_age >= 65 else print('Customer is not eligible for discount')
+# except ValueError:
+#     print('Age must be an integer value')
 
 
 # With Except / Else
+# try:
+#     customer_age = int(input("Please enter your age: "))
+# except ValueError:
+#     print('Age must be an integer value')
+# else:
+#     print('Eligible for discount') if customer_age >= 65 else print('Customer is not eligible for discount')
 
 # With Except / Else / Finally
+# try:
+#     customer_age = int(input("Please enter your age: "))
+# except ValueError:
+#     print('Age must be an integer value')
+# else:
+#     print('Eligible for discount') if customer_age >= 65 else print('Customer is not eligible for discount')
+# finally:
+#     print('I will always run no matter what. I am usually used for cleanup.')
+
 
 
 ''' Exercise 
